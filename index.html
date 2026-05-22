@@ -1,0 +1,1480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Arina Zhuravskaya — Product & Graphic Designer</title>
+<meta name="description" content="Product & graphic designer with 3+ years across pharma, e-commerce, and brand. Based in Warsaw." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Archivo+Black&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+<a href="#work" class="skip-link">Skip to content</a>
+
+<!-- ─── NAV ────────────────────────────────────────── -->
+<nav class="nav" id="nav">
+  <div class="left">
+    <span class="name">Arina Zhuravskaya</span>
+    <span class="role">— Product &amp; Graphic Designer</span>
+  </div>
+  <div class="right" id="nav-right">
+    <a href="#work">Work</a>
+    <a href="#about" class="nav-link-hide">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="nav-burger" id="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-right">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- ─── HERO ───────────────────────────────────────── -->
+<section class="hero wrap" data-screen-label="Hero">
+  <div class="frame hero-frame hero-v2 hero-v2-pending">
+    <div class="hero-v2-top">
+      <span class="cd-eyebrow"><span class="cd-eyebrow-dot"></span>Portfolio 2026</span>
+      <span class="hero-v2-availability" style="width: 260px; border-width: 1px 0px 1px 1px; padding: 12px 0px 12px 18px">
+        <span class="hero-v2-availability-dot" aria-hidden="true"></span>
+        <span class="hero-v2-availability-label">Available for work</span>
+      </span>
+    </div>
+
+    <h1 class="hero-v2-wordmark" aria-label="Arina Zhuravskaya" style="font-size: 140px"><span class="hero-tw" data-final="ARINA&#10;ZHURAVSKAYA">ARINA
+ZHURAVSKAYA</span><span class="hero-tw-cursor" aria-hidden="true" style="font-size: 166px; margin: 0px 0px -74px 6px">|</span></h1>
+
+    <div class="hero-v2-bottom">
+      <p class="hero-v2-desc">3+ years across pharma (AstraZeneca, via Greenpark Digital), global consumer electronics (Angel Trade), and cultural initiatives.
+
+ Open to Product &amp; Marketing Design roles</p>
+
+      <div class="hero-v2-meta">
+        <span class="hero-v2-based">
+          <span class="hero-v2-based-label">BASED IN POLAND,</span>
+          <span class="hero-v2-based-city">Warsaw</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  // Hero typewriter — loops forever
+  (function () {
+    var heroV2 = document.currentScript && document.currentScript.previousElementSibling;
+    if (!heroV2 || !heroV2.classList.contains('hero-v2')) {
+      heroV2 = document.querySelector('.hero-v2');
+    }
+    if (!heroV2) return;
+    var tw = heroV2.querySelector('.hero-tw');
+    var cursor = heroV2.querySelector('.hero-tw-cursor');
+    if (!tw) return;
+    var text = (tw.getAttribute('data-final') || tw.textContent || '').replace(/&#10;/g, '\n');
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (reduced) {
+      tw.textContent = text;
+      if (cursor) cursor.style.display = 'none';
+      heroV2.classList.remove('hero-v2-pending');
+      heroV2.classList.add('hero-v2-revealed');
+      return;
+    }
+
+    tw.textContent = '';
+    heroV2.classList.add('hero-v2-typing');
+
+    var TYPE_DELAY = 90;
+    var ERASE_DELAY = 45;
+    var HOLD_FULL = 1800;
+    var HOLD_EMPTY = 400;
+    var firstReveal = true;
+
+    function typeOut(onDone) {
+      var i = 0;
+      (function step() {
+        if (i < text.length) {
+          tw.textContent += text.charAt(i++);
+          setTimeout(step, TYPE_DELAY);
+        } else {
+          onDone();
+        }
+      })();
+    }
+    function eraseOut(onDone) {
+      (function step() {
+        var t = tw.textContent;
+        if (t.length > 0) {
+          tw.textContent = t.slice(0, -1);
+          setTimeout(step, ERASE_DELAY);
+        } else {
+          onDone();
+        }
+      })();
+    }
+    function loop() {
+      typeOut(function () {
+        if (firstReveal) {
+          firstReveal = false;
+          heroV2.classList.remove('hero-v2-pending');
+          heroV2.classList.remove('hero-v2-typing');
+          heroV2.classList.add('hero-v2-revealed');
+        }
+        setTimeout(function () {
+          eraseOut(function () {
+            setTimeout(loop, HOLD_EMPTY);
+          });
+        }, HOLD_FULL);
+      });
+    }
+
+    setTimeout(loop, 300);
+  })();
+</script>
+
+<!-- ─── WORK INDEX ─────────────────────────────────── -->
+<section class="wrap section" id="work" data-screen-label="Work">
+  <div class="frame">
+    <div class="section-head">
+      <span class="cd-eyebrow">SELECTED WORK</span>
+      <span class="cd-eyebrow muted">
+</span>
+    </div>
+
+    <div class="worklist" id="worklist">
+      <a class="item" href="#case-01" data-preview="0">
+        <span class="num">01</span>
+        <img class="thumb-mini" src="assets/az-zwrotnik.png" alt="AstraZeneca preview" loading="lazy" />
+        <span class="title">AstraZeneca</span>
+        <span class="desc">Medical data viz, HCP portal &amp; campaigns · via Greenpark</span>
+        <span class="year">2026 →</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="item" href="#case-02" data-preview="1">
+        <span class="num">02</span>
+        <img class="thumb-mini" src="assets/at-banner-hero.png" alt="Angel Trade preview" loading="lazy" />
+        <span class="title">Angel Trade</span>
+        <span class="desc">Three-year design partnership · trade shows + identity</span>
+        <span class="year">2022 – 2025</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="item" href="#case-03" data-preview="2">
+        <span class="num">03</span>
+        <img class="thumb-mini" src="assets/daheim-hero.png" alt="Daheim preview" loading="lazy" />
+        <span class="title">Daheim</span>
+        <span class="desc">Diploma · visual identity &amp; editorial system for a Polish handmade brand</span>
+        <span class="year">2025</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="item" href="#case-04" data-preview="3">
+        <span class="num">04</span>
+        <img class="thumb-mini" src="assets/kd-posts.png" alt="Kazki dla Dzivusi preview" loading="lazy" />
+        <span class="title">Kazki dla Dzivusi</span>
+        <span class="desc">Belarusian children's podcast · identity, motion, audio</span>
+        <span class="year">2024 – 2025</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="item" href="#case-05" data-preview="4">
+        <span class="num">05</span>
+        <img class="thumb-mini" src="assets/zb-sticker.png" alt="@zabiziapu preview" loading="lazy" />
+        <span class="title">@zabiziapu</span>
+        <span class="desc">Podcast on mental health &amp; social issues · visual system</span>
+        <span class="year">2023</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="item" href="#case-06" data-preview="5">
+        <span class="num">06</span>
+        <img class="thumb-mini" src="assets/zc-poster.png" alt="Zrabi Ciszej preview" loading="lazy" />
+        <span class="title">Zrabi Ciszej</span>
+        <span class="desc">Belarusian language &amp; music initiative · identity</span>
+        <span class="year">2022 – 2023</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Cursor preview -->
+<div class="preview" id="preview">
+  <div class="pframe" data-frame="0"><img class="pframe-img" src="assets/az-zwrotnik.png" alt="AstraZeneca preview" loading="lazy" /></div>
+  <div class="pframe" data-frame="1"><img class="pframe-img" src="assets/at-banner-hero.png" alt="Angel Trade preview" loading="lazy" /></div>
+  <div class="pframe" data-frame="2"><img class="pframe-img" src="assets/daheim-hero.png" alt="Daheim preview" loading="lazy" /></div>
+  <div class="pframe" data-frame="3"><img class="pframe-img" src="assets/kd-posts.png" alt="Kazki dla Dzivusi preview" loading="lazy" /></div>
+  <div class="pframe" data-frame="4"><img class="pframe-img" src="assets/zb-sticker.png" alt="@zabiziapu preview" loading="lazy" /></div>
+  <div class="pframe" data-frame="5"><img class="pframe-img" src="assets/zc-poster.png" alt="Zrabi Ciszej preview" loading="lazy" /></div>
+</div>
+
+<!-- ═════════════════════════════════════════════════ -->
+<!-- ═══ CASE STUDIES ═══════════════════════════════════ -->
+<!-- ═════════════════════════════════════════════════ -->
+
+<!-- 01 — AstraZeneca -->
+<section class="case-dark wrap" id="case-01" data-screen-label="Case 01 — AstraZeneca">
+  <div class="frame">
+    <a class="cd-back" href="#work">← Selected work</a>
+    <div class="cd-head az-head">
+      <img class="az-chromosome" src="assets/az-chromosome.png" alt="" aria-hidden="true" />
+      <h2 class="cd-wordmark" aria-label="AstraZeneca" style="margin: -9px; padding: 0px 0px 122px">ASTRA<br />ZENECA</h2>
+      <div class="cd-intro">
+        <p class="cd-desc">Medical data, decks &amp; HCP portal design — embedded with AstraZeneca's creative studio across 7 EMEA markets.</p>
+        <div class="cd-dates">Feb 2026 — present · via Greenpark Digital</div>
+        <ul class="cd-tags">
+          <li>Data visualisation</li>
+          <li>Pharma compliance</li>
+          <li>Email</li>
+          <li>Knak</li>
+          <li>HCP portal design</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cd-cards one">
+    <article class="cd-card">
+      <header class="cd-card-head">
+        <span class="cd-eyebrow">Awareness · <a class="az-fb-link" href="https://www.facebook.com/photo/?fbid=1846954049938751&set=pcb.1846959173271572" target="_blank" rel="noopener noreferrer">zwrotnikraka.pl <span class="arrow" aria-hidden="true">↗</span></a></span>
+        <span class="cd-num">01</span>
+      </header>
+      <div class="cd-card-art az-zwrotnik-art">
+        <img src="assets/az-zwrotnik.png" alt="Zwrotnik Raka — Paszport Molekularny six-slide carousel on hereditary cancer risk genes" />
+      <span class="cd-art-chip">Social · Post Carousel</span></div>
+      <footer class="cd-card-foot">
+        <h4>Zwrotnik Raka — #PaszportMolekularny</h4>
+        <p class="cd-card-meta">Six-slide educational carousel on hereditary cancer risk genes for the Zwrotnik Raka platform. Part of an awareness program that, together with Nie Wyglądam, reached 82K+.</p>
+        <div class="created-with cw-end" style="margin: -80px 0px 0px 896px">
+          <span class="created-with-label">created with</span>
+          <span class="created-with-icons">
+            <span class="cw-app cw-ai" title="Adobe Illustrator" aria-label="Adobe Illustrator">Ai</span>
+            <span class="cw-app cw-ps" title="Adobe Photoshop" aria-label="Adobe Photoshop">Ps</span>
+            <span class="cw-app cw-ff" title="Adobe Firefly" aria-label="Adobe Firefly">Ff</span>
+          </span>
+        </div>
+      </footer>
+    </article>
+  </div>
+
+  <div class="cd-foot">
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">What I did</span>
+      <p>Design client-facing &amp; educational decks. Translate medical data into hierarchy-led visualisations. Migrate website visuals into AZ Poland's HCP portal within the existing design system. Deliver print materials &amp; Knak email campaigns across 7 markets.</p>
+    </div>
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">Why it matters</span>
+      <p>Pharma communication has a high cost of being misread. The job isn't to make charts pretty — it's to remove every ambiguity between a clinical insight and the person who has to act on it.</p>
+    </div>
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">Outcomes</span>
+      <ul class="cd-outcomes">
+        <li><em>7</em><span>EMEA markets</span></li>
+        <li><em>60K</em><span>Zwrotnik Raka reach</span></li>
+        <li><em>22K</em><span>Nie Wyglądam reach</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- 02 — Angel Trade -->
+<section class="case-dark case-02-hero-section" id="case-02" data-screen-label="Case 02 — Angel Trade">
+
+  <!-- Cinematic full-bleed hero -->
+  <div class="at-cinematic">
+    <a class="cd-back" href="#work">← Selected work</a>
+
+    <div class="at-cinematic-grid">
+      <!-- Left: wordmark + intro -->
+      <div class="at-c-left">
+        <h2 class="at-wordmark" aria-label="Angel Trade">ANGEL<br />TRADE</h2>
+        <p class="at-desc">A three-year exhibition system built across Europe, Asia &amp; the MENA region.</p>
+        <div class="at-c-meta">
+          <div class="at-dates">2022 — 2025</div>
+          <ul class="at-tags">
+            <li>Brand system</li>
+            <li>Exhibition design</li>
+            <li>Campaign graphics</li>
+            <li>Print production</li>
+          </ul>
+        </div>
+        <a class="scroll-cue" href="#case-02-content">
+          <span class="scroll-cue-ring">↓</span>
+          <span>Scroll to explore</span>
+        </a>
+      </div>
+
+      <!-- Middle: hero image -->
+      <div class="at-c-image">
+        <img src="assets/at-stand-hero.png" alt="Angel Trade exhibition booth" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Continuing case content -->
+  <div id="case-02-content" class="case-02-rest">
+
+    <!-- Hero: motion video -->
+    <div class="frame frame-flush">
+      <div class="cd-hero">
+        <video src="assets/at-motion.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="cd-art-chip-stack">
+          <span class="cd-art-chip">Motion</span>
+          <span class="cd-art-chip">ITC Malta 2025</span>
+        </div>
+        <div class="created-with cd-art-stack">
+          <span class="created-with-label">created with</span>
+          <span class="created-with-icons">
+            <span class="cw-app cw-ae" title="Adobe After Effects" aria-label="Adobe After Effects">Ae</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature card -->
+    <div class="cd-cards one">
+      <article class="cd-card">
+        <header class="cd-card-head">
+          <span class="cd-num">01</span>
+        </header>
+        <div class="cd-card-art">
+          <img src="assets/at-banner-hero.png" alt="Hanging banner, IFA Berlin 2024" />
+          <div class="cd-art-chip-stack">
+            <span class="cd-art-chip">IFA Berlin 2024</span>
+            <span class="cd-art-chip">Large-scale hanging banner</span>
+          </div>
+          <div class="created-with cd-art-stack">
+            <span class="created-with-label">created with</span>
+            <span class="created-with-icons">
+              <span class="cw-app cw-id" title="Adobe InDesign" aria-label="Adobe InDesign">Id</span>
+              <span class="cw-app cw-ai" title="Adobe Illustrator" aria-label="Adobe Illustrator">Ai</span>
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Full-width evidence shot -->
+    <div class="frame frame-flush">
+      <div class="cd-evidence">
+        <img src="assets/at-banner-full.png?v=2" alt="Angel Trade lounge-zone billboard" />
+        <div class="cd-art-chip-stack">
+          <span class="cd-art-chip">Installed</span>
+          <span class="cd-art-chip">Lounge zone billboard</span>
+        </div>
+        <div class="created-with cd-evidence-stack">
+          <span class="created-with-label">created with</span>
+          <span class="created-with-icons">
+            <span class="cw-app cw-id" title="Adobe InDesign" aria-label="Adobe InDesign">Id</span>
+            <span class="cw-app cw-ai" title="Adobe Illustrator" aria-label="Adobe Illustrator">Ai</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Magazine ad -->
+    <div class="frame">
+      <div class="cd-mag">
+        <div class="cd-mag-img">
+          <img src="assets/at-magazine-ad.jpg?v=2" alt="Magazine ad — ITC Malta 2025 catalogue" />
+          <div class="cd-art-chip-stack">
+            <span class="cd-art-chip">Print</span>
+            <span class="cd-art-chip">ITC Malta 2025</span>
+          </div>
+        </div>
+        <div class="cd-mag-note">
+          <h4>Catalogue spread</h4>
+          <p>Two-page ad for the official exhibitor catalogue. Localised Spanish copy, scannable QR for WhatsApp follow-up, optimised for the table-top reading angle.</p>
+          <div class="created-with">
+            <span class="created-with-label">created with</span>
+            <span class="created-with-icons">
+              <span class="cw-app cw-id" title="Adobe InDesign" aria-label="Adobe InDesign">Id</span>
+              <span class="cw-app cw-ai" title="Adobe Illustrator" aria-label="Adobe Illustrator">Ai</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cd-foot">
+      <div class="cd-foot-col">
+        <span class="cd-eyebrow">What I did</span>
+        <p>Owned visual design end-to-end for ITC Malta 2025, GITEX Global 2024 (Dubai), and IFA Berlin 2024 &amp; 2025. Booth graphics, hanging banners, signage, presentation decks, motion graphics, magazine ads, and on-screen visuals.</p>
+      </div>
+      <div class="cd-foot-col">
+        <span class="cd-eyebrow">Why it matters</span>
+        <p>A 30-square-metre booth in a hall of 600 has to do three things at once: announce itself across an aisle, hold up to a five-second walk-past, and reward the visitor who stops to read. The system let the team focus on what was actually new each show.</p>
+      </div>
+      <div class="cd-foot-col">
+        <span class="cd-eyebrow">Outcomes</span>
+        <ul class="cd-outcomes">
+          <li><em>70%</em><span>Faster booth design</span></li>
+          <li><em>4</em><span>International shows</span></li>
+          <li><em>3</em><span>Continents</span></li>
+          <li><em>3 yrs</em><span>Remote partnership</span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 03 — Daheim (diploma) -->
+<section class="case-dark case-03-hero-section" id="case-03" data-screen-label="Case 03 — Daheim">
+
+  <!-- Cinematic full-bleed hero -->
+  <div class="at-cinematic dh-cinematic">
+    <a class="cd-back" href="#work">— Selected work</a>
+
+    <div class="at-cinematic-grid dh-cinematic-grid">
+      <div class="at-c-left dh-c-left">
+        <h2 class="at-wordmark">DAHEIM</h2>
+        <p class="at-desc">Daheim creates thoughtful objects for everyday living - crafted by independent makers to bring warmth, comfort, and character into your home</p>
+        <div class="at-c-meta">
+          <div class="at-dates">2022 — 2025</div>
+          <ul class="at-tags">
+            <li>Brand identity</li>
+            <li>Packaging design</li>
+            <li>Label design</li>
+            <li>Product photography</li>
+          </ul>
+        </div>
+        <a class="scroll-cue" href="#case-03-content">
+          <span class="scroll-cue-ring">↓</span>
+          <span>Scroll to explore</span>
+        </a>
+      </div>
+
+      <div class="at-c-image dh-c-image">
+        <img src="assets/daheim-hero.png" alt="Daheim candle collection — Noir and Vero" />
+      </div>
+    </div>
+  </div>
+
+  <div id="case-03-content" class="case-02-rest dh-content">
+
+    <!-- ── THE SYSTEM — webtoon stack of brandbook cards ─── -->
+    <section class="dhs" aria-label="The System — Daheim brand book">
+      <header class="dhs-head">
+        <span class="cd-eyebrow">+ Brand book · 02</span>
+        <h2 class="dhs-title">Brand book</h2>
+        <span class="cd-eyebrow muted dhs-card-count"><span class="dhs-shown">1</span> / 8 cards</span>
+      </header>
+
+      <div class="dhs-strip" data-state="collapsed">
+
+        <article class="dhs-stage" id="dhs-1" data-screen-label="System · 01 The Mark">
+          <div class="dhs-index"><span>01</span> / 08</div>
+          <div class="dhs-left">
+            <div>
+              <div class="dhs-eyebrow">Logotype</div>
+              <h3 class="dhs-display">The<br/>Mark</h3>
+              <p class="dhs-lede">A wordmark and a cut "A" monogram. Built for both dark and light surfaces.</p>
+            </div>
+          </div>
+          <div class="dhs-right">
+            <div class="dhs-logo-board">
+              <div class="dhs-lc dhs-lc-wordmark">
+                <div class="dhs-lc-head"><span>Primary wordmark</span></div>
+                <div class="dhs-lc-stage">
+                  <img class="dhs-wordmark-img" src="assets/dh-wordmark.png" alt="Daheim wordmark" />
+                </div>
+                <div class="dhs-lc-foot"><span class="dhs-code">01</span><span>– 2026</span></div>
+              </div>
+              <div class="dhs-lc dhs-lc-dark">
+                <div class="dhs-lc-head"><span>Monogram · Reverse</span></div>
+                <div class="dhs-lc-stage">
+                  <img class="dhs-mono-img" src="assets/dh-mono-light.png" alt="Daheim monogram, reverse" />
+                </div>
+                <div class="dhs-lc-foot"><span class="dhs-code">02A</span><span>#0D0D0D</span></div>
+              </div>
+              <div class="dhs-lc dhs-lc-light">
+                <div class="dhs-lc-head"><span>Monogram · Primary</span></div>
+                <div class="dhs-lc-stage">
+                  <img class="dhs-mono-img" src="assets/dh-mono-dark.png" alt="Daheim monogram, primary" />
+                </div>
+                <div class="dhs-lc-foot"><span class="dhs-code">02B</span><span>#ECE4D2</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="dhs-collapse" id="dhs-collapse">
+          <div class="dhs-collapse-inner">
+
+            <article class="dhs-stage" id="dhs-2" data-screen-label="System · 02 Introduction">
+          <div class="dhs-index"><span>02</span> / 08</div>
+          <div class="dhs-left">
+            <div>
+              <div class="dhs-eyebrow">Introduction</div>
+              <h3 class="dhs-display">Introduction</h3>
+              <p class="dhs-lede"><span class="dhs-accent">Daheim</span> makes goods to help you build a nest — a place of comfort and self-expression, crafted by local makers, designed to last.</p>
+              <ul class="dhs-bullets">
+                <li>Furniture</li>
+                <li>Decor</li>
+                <li>Gifts</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dhs-right">
+            <div class="dhs-blocks">
+              <div class="dhs-block dhs-b-olive"  style="top:-8%;right:-6%;width:58%;height:68%"></div>
+              <div class="dhs-block dhs-b-forest" style="top:24%;right:-18%;width:46%;height:70%"></div>
+              <div class="dhs-block dhs-b-orange" style="bottom:-10%;right:8%;width:62%;height:46%"></div>
+            </div>
+          </div>
+        </article>
+
+            <article class="dhs-stage" id="dhs-3" data-screen-label="System · 03 The Story">
+          <div class="dhs-index"><span>03</span> / 08</div>
+          <div class="dhs-left">
+            <div>
+              <div class="dhs-eyebrow">The Story</div>
+              <h3 class="dhs-display tight">A Quiet<br/>Home</h3>
+              <p class="dhs-lede">Daheim is the German word for <span class="dhs-accent">"home"</span> — not the building, but the feeling. The pause when you step inside, take off your shoes, and exhale.</p>
+            </div>
+          </div>
+          <div class="dhs-right">
+            <div class="dhs-blocks">
+              <div class="dhs-block dhs-b-olive"  style="top:-8%;left:-12%;width:38%;height:54%"></div>
+              <div class="dhs-block dhs-b-forest" style="top:10%;right:6%;width:30%;height:78%"></div>
+              <div class="dhs-block dhs-b-orange" style="bottom:-6%;left:18%;width:36%;height:38%"></div>
+            </div>
+          </div>
+        </article>
+
+            <article class="dhs-stage" id="dhs-4" data-screen-label="System · 04 Color">
+          <div class="dhs-index"><span>04</span> / 08</div>
+          <div class="dhs-left">
+            <div>
+              <div class="dhs-eyebrow">Colour</div>
+              <h3 class="dhs-display">Palette</h3>
+              <p class="dhs-lede">Four colors do the work of forty. Cream is light, olive is calm, forest is depth, orange is the spark.</p>
+            </div>
+          </div>
+          <div class="dhs-right">
+            <div class="dhs-palette">
+              <div class="dhs-sw dhs-sw-cream">
+                <div class="dhs-sw-num">01</div>
+                <div class="dhs-sw-body">
+                  <div class="dhs-sw-name">Linen<br/>Cream</div>
+                  <div class="dhs-sw-meta"><span>#ECE4D2</span><span>Surface</span></div>
+                </div>
+              </div>
+              <div class="dhs-sw dhs-sw-olive">
+                <div class="dhs-sw-num">02</div>
+                <div class="dhs-sw-body">
+                  <div class="dhs-sw-name">Olive<br/>Field</div>
+                  <div class="dhs-sw-meta"><span>#8A9D6E</span><span>Brand</span></div>
+                </div>
+              </div>
+              <div class="dhs-sw dhs-sw-forest">
+                <div class="dhs-sw-num">03</div>
+                <div class="dhs-sw-body">
+                  <div class="dhs-sw-name">Deep<br/>Forest</div>
+                  <div class="dhs-sw-meta"><span>#3D4F2C</span><span>Depth</span></div>
+                </div>
+              </div>
+              <div class="dhs-sw dhs-sw-orange">
+                <div class="dhs-sw-num">04</div>
+                <div class="dhs-sw-body">
+                  <div class="dhs-sw-name">Ember<br/>Orange</div>
+                  <div class="dhs-sw-meta"><span>#E0651D</span><span>Accent</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+            <article class="dhs-stage" id="dhs-5" data-screen-label="System · 05 Typography">
+          <div class="dhs-index"><span>05</span> / 08</div>
+          <div class="dhs-left">
+            <div>
+              <div class="dhs-eyebrow">Typography</div>
+              <h3 class="dhs-display tight">Two<br/>Voices</h3>
+              <p class="dhs-lede">A heavy grotesque for declarations. A humanist sans for the conversation. A mono to mark the system.</p>
+            </div>
+          </div>
+          <div class="dhs-right">
+            <div class="dhs-type-frame">
+              <div class="dhs-specimen">
+                <div class="dhs-specimen-display">Aa<span class="dhs-alt">Bb</span>Cc<span class="dhs-alt">1</span>23</div>
+                <div class="dhs-specimen-foot"><span>Heavy Grotesque · 900</span><span>Headings · 56–168px</span></div>
+              </div>
+              <div class="dhs-specimen">
+                <div class="dhs-specimen-body">"A home is not a place but a feeling — a quiet room, a familiar chair, the way the light falls in October."</div>
+                <div class="dhs-specimen-foot"><span>Humanist Sans · 400–700</span><span>Body · 14–28px</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+            <article class="dhs-stage" id="dhs-6" data-screen-label="System · 06 Pattern">
+          <div class="dhs-index"><span>06</span> / 08</div>
+          <div class="dhs-left">
+            <div>
+              <div class="dhs-eyebrow">Composition</div>
+              <h3 class="dhs-display tight">Stacked<br/>Rooms</h3>
+              <p class="dhs-lede">Color blocks behave like rooms seen from above. Three to five rectangles per composition. Never centre — always anchor one edge to bleed. Orange enters last and smallest.</p>
+            </div>
+          </div>
+          <div class="dhs-right">
+            <div class="dhs-pattern">
+              <div class="dhs-pg dhs-olive p1"></div>
+              <div class="dhs-pg dhs-forest-deep p2"></div>
+              <div class="dhs-pg dhs-olive p3"></div>
+              <div class="dhs-pg dhs-orange p4"></div>
+              <div class="dhs-pg dhs-forest p5"></div>
+              <div class="dhs-pg dhs-cream p6"></div>
+              <div class="dhs-pg dhs-olive p7"></div>
+            </div>
+          </div>
+        </article>
+
+            <article class="dhs-stage" id="dhs-7" data-screen-label="System · 07 Objects">
+          <div class="dhs-index"><span>07</span> / 08</div>
+          <div class="dhs-left">
+            <div>
+              <div class="dhs-eyebrow">Iconography</div>
+              <h3 class="dhs-display tight">The<br/>Objects</h3>
+              <p class="dhs-lede">A library of silhouettes — drawn from the catalog. <span class="dhs-accent">Furniture, vessels, light.</span> Used as ornament, signposts, and texture.</p>
+            </div>
+          </div>
+          <div class="dhs-right">
+            <div class="dhs-blocks">
+              <div class="dhs-block dhs-b-forest" style="top:-8%;right:-10%;width:36%;height:44%"></div>
+              <div class="dhs-block dhs-b-orange" style="bottom:-6%;left:-6%;width:30%;height:30%"></div>
+            </div>
+            <div class="dhs-objects">
+              <div class="dhs-op-head"><span>Iconography · v.1.0</span><span>11 marks</span></div>
+              <div class="dhs-op-stage">
+                <image-slot id="dhs-icons" class="dhs-img" fit="contain" shape="rect" placeholder="Object iconography sheet · forest silhouettes on cream"></image-slot>
+              </div>
+              <div class="dhs-op-foot"><span>Forest on Cream</span><span>Silhouette only — never outlined</span></div>
+            </div>
+          </div>
+        </article>
+
+            <article class="dhs-stage" id="dhs-8" data-screen-label="System · 08 Closing">
+          <div class="dhs-index"><span>08</span> / 08</div>
+          <div class="dhs-left">
+            <div>
+              <div class="dhs-eyebrow">Thank you</div>
+              <h3 class="dhs-display tight">Come<br/>Home.</h3>
+              <p class="dhs-lede">Daheim is a diploma project by Arina Zhuravskaya — a complete identity system designed for a small-batch furniture house in southern Germany.</p>
+              <dl class="dhs-meta">
+                <div class="dhs-meta-pair">
+                  <div class="dhs-meta-row"><dt>Type</dt><dd>Diploma project</dd></div>
+                  <div class="dhs-meta-row"><dt>Year</dt><dd>2025</dd></div>
+                </div>
+                <div class="dhs-meta-row"><dt>Institution</dt><dd>PJAIT Warsaw — B.A. in New Media Arts</dd></div>
+                <div class="dhs-meta-row"><dt>Role</dt><dd>Solo — concept, brand strategy, visual identity, type selection, art direction, print &amp; digital application.</dd></div>
+                <div class="dhs-meta-row"><dt>Tools</dt><dd>Adobe Illustrator, InDesign, Photoshop · Figma</dd></div>
+              </dl>
+            </div>
+          </div>
+          <div class="dhs-right">
+            <div class="dhs-blocks">
+              <div class="dhs-block dhs-b-forest" style="top:-8%;right:-4%;width:70%;height:42%"></div>
+              <div class="dhs-block dhs-b-olive"  style="bottom:-12%;right:18%;width:54%;height:54%"></div>
+              <div class="dhs-block dhs-b-orange" style="bottom:6%;right:-8%;width:30%;height:30%"></div>
+            </div>
+            <div class="dhs-mono-overlay">
+              <image-slot id="dhs-mono-closing" class="dhs-img" fit="contain" shape="rect" placeholder="Monogram · cream" style="width: 531px"></image-slot>
+            </div>
+          </div>
+        </article>
+
+          </div>
+        </div>
+
+        <div class="dhs-toggle-row">
+          <button class="dhs-toggle" type="button" aria-expanded="false" aria-controls="dhs-collapse">
+            <span class="dhs-toggle-label">Expand brandbook</span>
+            <span class="dhs-toggle-arrow" aria-hidden="true">↓</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4 · STORY PUBLICATION ──────────────────────────── -->
+    <div class="dh-section dh-publication">
+      <div class="dh-label-row">
+        <span class="cd-eyebrow">+ Publication · 03</span>
+        <span class="cd-eyebrow muted">Story · A5 · printed</span>
+      </div>
+      <figure class="dh-pub-frame">
+        <video class="dh-pub-video" src="assets/dh-publication.mp4" muted loop playsinline preload="auto" aria-label="Daheim story publication — flipping through pages" onended="this.currentTime=0; this.play();"></video>
+      <figcaption class="dh-caption-chip">A printed publication carrying the brand's story.</figcaption><div class="created-with dh-created-with"><span class="created-with-label">created with</span><span class="created-with-icons"><span class="cw-app cw-id" title="Adobe InDesign" aria-label="Adobe InDesign">Id</span><span class="cw-app cw-ai" title="Adobe Illustrator" aria-label="Adobe Illustrator">Ai</span></span></div></figure>
+    </div>
+
+    <!-- 5 · PACKAGING ──────────────────────────────────── -->
+    <div class="dh-section dh-pack">
+      <div class="dh-label-row">
+        <span class="cd-eyebrow">+ Packaging · 04</span>
+        <span class="cd-eyebrow muted">Collateral system</span>
+      </div>
+      <figure class="dh-pack-frame"><div class="dh-pack-grid">
+        <figure class="dh-pack-cell">
+          <img class="dh-pack-img" src="assets/dh-pack-stickers.png" alt="Daheim sticker set applied to a kraft mailer box" />
+        </figure>
+        <figure class="dh-pack-cell">
+          <img class="dh-pack-img" src="assets/dh-pack-catalog.png" alt="Daheim 2025 catalog — cover and product spread" />
+        </figure>
+        <figure class="dh-pack-cell">
+          <img class="dh-pack-img" src="assets/dh-pack-postcards.png" alt="Four Daheim postcards with home-themed quotes" />
+        </figure>
+        <figure class="dh-pack-cell">
+          <img class="dh-pack-img" src="assets/dh-pack-cards.png" alt="Daheim business cards — front and back" />
+        </figure>
+      </div><div class="dh-caption-chips"><span class="dh-caption-chip">Catalog</span><span class="dh-caption-chip">Postcards</span><span class="dh-caption-chip">Sticker box</span><span class="dh-caption-chip">Business cards</span></div></figure>
+    </div>
+
+    <!-- 6 · WEBSITE ─────────────────────────────────────── -->
+    <div class="dh-section dh-website">
+      <div class="dh-label-row">
+        <span class="cd-eyebrow">+ Website · 05</span>
+        <a class="cd-eyebrow dh-website-link" href="https://daheim-handmade.web.app/" target="_blank" rel="noopener noreferrer">
+          daheim-handmade.web.app
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <figure class="dh-web-frame">
+        <video class="dh-web-video" src="assets/dh-website.mp4" muted loop playsinline preload="auto" aria-label="Daheim website — overview walkthrough" onended="this.currentTime=0; this.play();"></video>
+      <div class="dh-caption-chips"><span class="dh-caption-chip">Multi-page brand site</span><span class="dh-caption-chip">Overview</span><span class="dh-caption-chip">E-commerce</span></div><div class="created-with dh-created-with"><span class="created-with-label">created with</span><span class="created-with-icons"><span class="cw-app cw-figma" title="Figma" aria-label="Figma">Fi</span><span class="cw-app cw-react" title="React" aria-label="React">Re</span></span></div></figure>
+    </div>
+
+    <!-- 7 · PROCESS STRIP ──────────────────────────────── -->
+    <div class="dh-section dh-process">
+      <div class="dh-label-row">
+        <span class="cd-eyebrow">+ Process · 06</span>
+        <span class="cd-eyebrow muted">Quiet</span>
+      </div>
+      <figure class="dh-process-frame"><div class="dh-process-grid">
+        <figure class="dh-process-cell"><img class="dh-process-img" src="assets/dh-process-01.png" alt="Process · 01" loading="lazy" /></figure>
+        <figure class="dh-process-cell"><img class="dh-process-img" src="assets/dh-process-02.png" alt="Process · 02" loading="lazy" /></figure>
+        <figure class="dh-process-cell"><img class="dh-process-img" src="assets/dh-process-03.png" alt="Process · 03" loading="lazy" /></figure>
+        <figure class="dh-process-cell"><img class="dh-process-img" src="assets/dh-process-04.png" alt="Process · 04" loading="lazy" /></figure>
+        <figure class="dh-process-cell"><img class="dh-process-img" src="assets/dh-process-05.png" alt="Process · 05" loading="lazy" /></figure>
+        <figure class="dh-process-cell"><img class="dh-process-img" src="assets/dh-process-06.png" alt="Process · 06" loading="lazy" /></figure>
+        <figure class="dh-process-cell"><img class="dh-process-img" src="assets/dh-process-07.png" alt="Process · 07" loading="lazy" /></figure>
+        <figure class="dh-process-cell"><img class="dh-process-img" src="assets/dh-process-08.png" alt="Process · 08" loading="lazy" /></figure>
+        <figure class="dh-process-cell"><img class="dh-process-img" src="assets/dh-process-09.png" alt="Process · 09" loading="lazy" /></figure>
+        <figure class="dh-process-cell"><img class="dh-process-img" src="assets/dh-process-10.png" alt="Process · 10" loading="lazy" /></figure>
+      </div><div class="dh-caption-chips"><span class="dh-caption-chip">Sketches</span><span class="dh-caption-chip">Palette tests</span><span class="dh-caption-chip">Typographic studies</span></div></figure>
+    </div>
+
+    <!-- 8 · MORE (always visible) ──────────────────────── -->
+    <div class="dh-more dh-more-open">
+      <div class="dh-more-body">
+        <div class="dh-more-col">
+          <span class="cd-eyebrow">Concept</span>
+          <p>Daheim is a small Polish brand of handmade furniture and home objects. The brief: build a visual identity disciplined enough to scale across a brandbook, a catalog, packaging, and stickers, without losing the warmth and craft the brand is selling.</p>
+        </div>
+        <div class="dh-more-col">
+          <span class="cd-eyebrow">Process</span>
+          <p>The unlock was treating a single continuous looping line as a system element rather than decoration. One shape, applied with different weights and contexts: it carries section numbers in the catalog, becomes the wave frame on candle labels, appears as a sticker motif, and sets the rhythm of the brandbook.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9 · FOOTER ─────────────────────────────────────── -->
+    <div class="dh-footer">
+      <span class="dh-foot-line">Defended at PJAIT Warsaw, BA New Media Arts, 2025.</span>
+      <span class="dh-foot-line">GRADE 5+</span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 04 — Kazki dla Dzivusi -->
+<section class="case-dark case-04-hero-section" id="case-04" data-screen-label="Case 04 — Kazki dla Dzivusi">
+
+  <div class="at-cinematic kd-cinematic">
+    <a class="cd-back kd-back" href="#work">→ Selected work</a>
+
+    <div class="kd-hero-grid">
+      <div class="kd-hero-left">
+        <div class="kd-eyebrow">Podcast for kids</div>
+        <h2 class="at-wordmark kd-wordmark" aria-label="Kazki dla Dzivusi">KAZKI DLA<br/>DZIVUSI</h2>
+        <div class="kd-stripe" aria-hidden="true">
+          <span style="background:#1c33d6"></span>
+          <span style="background:#d83333"></span>
+          <span style="background:#e74e8c"></span>
+          <span style="background:#3a5638"></span>
+        </div>
+        <div class="kd-dates">2024 — 2025</div>
+        <p class="kd-desc">A Belarusian podcast for kids and their parents that brings classic fairy tales to a generation growing up outside Belarus.</p>
+      </div>
+
+      <div class="kd-hero-right">
+        <image-slot id="kd-pins" class="kd-pins-slot" fit="contain" shape="rect" placeholder="Drop pin / badge artwork (transparent PNG)"></image-slot>
+        <ul class="kd-tags">
+          <li>Visual identity</li>
+          <li>Motion graphics</li>
+          <li>Audio production</li>
+          <li>For diaspora families</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="case-04-content" class="case-02-rest">
+
+  <div class="cd-cards one">
+    <article class="cd-card kd-motion-card">
+      <header class="cd-card-head">
+        <span class="cd-eyebrow">Motion intros</span>
+        <span class="cd-num">02</span>
+      </header>
+      <div class="cd-card-art kd-motion-art">
+        <video class="kd-motion-video" src="assets/kd-intro.mp4" muted loop playsinline preload="auto" aria-label="Kazki dla Dzivusi — YouTube channel intro animation" style="height: 723px"></video>
+        <div class="cd-art-chip-stack">
+          <span class="cd-art-chip">Animated Intro</span>
+          <span class="cd-art-chip">YouTube</span>
+        </div>
+        <div class="created-with cd-art-stack">
+          <span class="created-with-label">created with</span>
+          <span class="created-with-icons">
+            <span class="cw-app cw-ae" title="Adobe After Effects" aria-label="Adobe After Effects">Ae</span>
+            <span class="cw-app cw-pr" title="Adobe Premiere Pro" aria-label="Adobe Premiere Pro">Pr</span>
+            <span class="cw-app cw-ai" title="Adobe Illustrator" aria-label="Adobe Illustrator">Ai</span>
+          </span>
+        </div>
+      </div>
+      <footer class="cd-card-foot">
+      </footer>
+    </article>
+  </div>
+
+  <div class="cd-cards one">
+    <article class="cd-card kd-youtube-card">
+      <header class="cd-card-head">
+        <span class="cd-eyebrow">YouTube · <a class="kd-youtube-link" href="https://www.youtube.com/@%D0%9A%D0%B0%D0%B7%D0%BA%D1%96%D0%94%D0%BB%D1%8F%D0%94%D0%B7%D1%96%D0%B2%D1%83%D1%81%D1%96/shorts" target="_blank" rel="noopener noreferrer">@КазкіДляДзівусі <span class="arrow" aria-hidden="true">↗</span></a></span>
+        <span class="cd-num">03</span>
+      </header>
+      <div class="cd-card-art kd-youtube-art">
+        <img src="assets/kd-youtube.png" alt="Kazki dla Dzivusi YouTube channel — channel page mockup on a MacBook Pro" />
+        <span class="cd-art-chip">YouTube Channel Mockup</span>
+        <div class="created-with cd-art-stack">
+          <span class="created-with-label">created with</span>
+          <span class="created-with-icons">
+            <span class="cw-app cw-figma" title="Figma" aria-label="Figma">Fi</span>
+          </span>
+        </div>
+      </div>
+      <footer class="cd-card-foot">
+      </footer>
+    </article>
+  </div>
+
+  <div class="cd-cards one">
+    <article class="cd-card kd-posts-card">
+      <header class="cd-card-head">
+        <span class="cd-eyebrow">Instagram · post carousel</span>
+        <span class="cd-num">04</span>
+      </header>
+      <div class="cd-card-art kd-posts-art">
+        <img src="assets/kd-posts.png" alt="Kazki dla Dzivusi — Instagram carousel introducing the hosts Vasiĺ and Alena" />
+        <div class="cd-art-chip-stack">
+          <span class="cd-art-chip">Instagram</span>
+          <span class="cd-art-chip">6-slide Carousel</span>
+        </div>
+        <div class="created-with cd-art-stack">
+          <span class="created-with-label">created with</span>
+          <span class="created-with-icons">
+            <span class="cw-app cw-figma" title="Figma" aria-label="Figma">Fi</span>
+          </span>
+        </div>
+      </div>
+      <footer class="cd-card-foot">
+      </footer>
+    </article>
+  </div>
+
+  <div class="cd-foot">
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">What I did</span>
+      <p>Co-created the show from the ground up — visual identity, character treatments, episode covers, animated intros. Recorded and edited audio episodes through classic Belarusian fairy tales for a generation growing up outside Belarus.</p>
+    </div>
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">Why it matters</span>
+      <p>Diaspora families are a quiet, underserved audience. The brief was to make Belarusian feel like home — not like homework.</p>
+    </div>
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">Outcomes</span>
+      <ul class="cd-outcomes">
+        <li><em>BE</em><span>Belarusian-language</span></li>
+        <li><em>Co</em><span>Co-created end-to-end</span></li>
+      </ul>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+
+<!-- 05 — @zabiziapu -->
+<section class="case-dark case-05-hero-section" id="case-05" data-screen-label="Case 05 — @zabiziapu">
+
+  <div class="at-cinematic zb-cinematic">
+    <a class="cd-back zb-back" href="#work">→ Selected work</a>
+    <span class="zb-year">2023</span>
+
+    <div class="zb-hero-grid">
+      <div class="zb-hero-left">
+        <h2 class="at-wordmark zb-wordmark" aria-label="@zabiziapu">@ZABI<br/>ZIAPU</h2>
+        <img class="zb-sticker" src="assets/zb-sticker.png" alt="@zabiziapu — mouth illustration with ЗАБI ЗЯПУ badge" />
+      </div>
+
+      <div class="zb-hero-right">
+        <p class="zb-desc">A Belarusian podcast on mental health, social issues &amp; relationships — visual system &amp; video edit.</p>
+        <div class="zb-dates">Jun — Sep 2023</div>
+        <ul class="zb-tags">
+          <li>Custom Figma design system</li>
+          <li>Posts &amp; reels</li>
+          <li>Podcast video edit</li>
+          <li>Cross-platform</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="case-05-content" class="case-02-rest">
+
+  <div class="cd-cards one">
+    <article class="cd-card zb-social-card">
+      <header class="cd-card-head">
+        <span class="cd-eyebrow">Social media · <a class="zb-social-link" href="https://www.instagram.com/zabiziapu/" target="_blank" rel="noopener noreferrer">@zabiziapu <span class="arrow" aria-hidden="true">↗</span></a></span>
+        <span class="cd-num">01</span>
+      </header>
+      <div class="zb-social-grid">
+        <div class="zb-social-copy">
+          <span class="zb-social-tag">Social media</span>
+          <p class="zb-social-lead">I created social media posts for an Instagram account and a podcast that produce edutainment content in Belarusian.</p>
+          <div class="zb-social-focus">
+            <span class="zb-social-focus-label">Focus:</span>
+            <ul class="zb-social-tags">
+              <li>Content strategy</li>
+              <li>Social media design</li>
+              <li>Edutainment</li>
+              <li>Community engagement</li>
+            </ul>
+          </div>
+        </div>
+        <figure class="zb-social-art">
+          <image-slot id="zb-social" class="zb-social-slot" fit="contain" shape="rounded" radius="12" placeholder="Instagram feed — phone preview + 3×3 post grid"></image-slot>
+          <div class="created-with cd-art-stack">
+            <span class="created-with-label">created with</span>
+            <span class="created-with-icons">
+              <span class="cw-app cw-figma" title="Figma" aria-label="Figma">Fi</span>
+            </span>
+          </div>
+        </figure>
+      </div>
+    </article>
+  </div>
+
+  <div class="cd-foot">
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">What I did</span>
+      <p>Built a custom Figma design system to keep posts, reels, and engagement content coherent across a fast-moving editorial calendar. Edited podcast video for vertical (Reels / TikTok) and horizontal (YouTube) distribution.</p>
+    </div>
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">Why it matters</span>
+      <p>Mental-health conversation deserves a visual register that's neither clinical nor cute. We wanted something that looked like a friend speaking honestly — not a brochure.</p>
+    </div>
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">Surface</span>
+      <ul class="cd-outcomes">
+        <li><em>IG</em><span>Instagram</span></li>
+        <li><em>TT</em><span>TikTok</span></li>
+        <li><em>YT</em><span>YouTube</span></li>
+      </ul>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+
+<!-- 06 — Zrabi Ciszej -->
+<section class="case-dark case-06-hero-section" id="case-06" data-screen-label="Case 06 — Zrabi Ciszej">
+
+  <!-- Cinematic full-bleed hero -->
+  <div class="at-cinematic zc-cinematic">
+    <a class="cd-back" href="#work">— Selected work</a>
+
+    <div class="at-cinematic-grid zc-cinematic-grid">
+      <div class="at-c-left zc-c-left">
+        <span class="cd-eyebrow">— Selected work</span>
+        <h2 class="at-wordmark" aria-label="Zrabi Ciszej">ZRABI<br/>CISZEJ</h2>
+        <p class="at-desc">"<em>Make It Quieter</em>" — a Belarusian language &amp; music platform hosting intimate musical gatherings.</p>
+        <div class="at-c-meta">
+          <div class="at-dates">2022 — 2023</div>
+          <ul class="at-tags">
+            <li>Visual identity</li>
+            <li>Event posters</li>
+            <li>Social &amp; merch</li>
+            <li>Guidelines</li>
+          </ul>
+        </div>
+        <a class="scroll-cue" href="#case-06-content">
+          <span class="scroll-cue-ring">↓</span>
+          <span>Scroll to explore</span>
+        </a>
+      </div>
+
+      <div class="at-c-image zc-c-image">
+        <img src="assets/zc-tshirt.png" alt="Zrabi Ciszej — washed black t-shirt with ghost character" />
+      </div>
+    </div>
+  </div>
+
+  <div id="case-06-content" class="case-02-rest">
+
+    <div class="cd-cards one">
+      <article class="cd-card zc-xmas-card">
+        <header class="cd-card-head">
+          <span class="cd-eyebrow">Neon Sign · SpinBar</span>
+          <span class="cd-num">01</span>
+        </header>
+        <div class="cd-card-art zc-xmas-art">
+          <div class="zc-xmas-row">
+            <figure class="zc-xmas-cell zc-xmas-poster">
+              <img src="assets/zc-neon-poster.png" alt="Zrabi Ciszej · Neon Sign poster · 24.08 SpinBar 19:00" />
+            <span class="cd-art-chip">Poster · 24.08 SpinBar</span></figure>
+            <figure class="zc-xmas-cell zc-xmas-sticker">
+              <img src="assets/zc-neon-sticker.png" alt="Zrabi Ciszej · Neon Sign holographic sticker on a metal post" />
+            <span class="cd-art-chip">Sticker · Holographic</span></figure>
+          </div>
+        </div>
+        <footer class="cd-card-foot">
+          <h4>Neon Sign <em>· House · Techno · Electronic</em></h4>
+          <p class="cd-card-meta">Poster &amp; holographic sticker for the SpinBar night — inspired by film-set "shooting in progress" neon signs. 24.08, 19:00.</p>
+          <div class="created-with">
+            <span class="created-with-label">created with</span>
+            <span class="created-with-icons">
+              <span class="cw-app cw-procreate" title="Procreate" aria-label="Procreate">Pc</span>
+              <span class="cw-app cw-ai" title="Adobe Illustrator" aria-label="Adobe Illustrator">Ai</span>
+            </span>
+          </div>
+        </footer>
+      </article>
+
+      <article class="cd-card zc-xmas-card">
+        <header class="cd-card-head">
+          <span class="cd-eyebrow">Christmas event · Beer &amp; Wine</span>
+          <span class="cd-num">02</span>
+        </header>
+        <div class="cd-card-art zc-xmas-art">
+          <div class="zc-xmas-row">
+            <figure class="zc-xmas-cell zc-xmas-poster">
+              <img src="assets/zc-poster.png" alt="Zrabi Ciszej · Christmas event poster · 26.12 · 19:00" />
+            <span class="cd-art-chip">Poster · Beer & Wine</span></figure>
+            <figure class="zc-xmas-cell zc-xmas-sticker">
+              <img src="assets/zc-sticker.png" alt="Zrabi Ciszej · circular event sticker applied to a metal post" />
+            <span class="cd-art-chip">Sticker · Circular</span></figure>
+          </div>
+        </div>
+        <footer class="cd-card-foot">
+          <h4>It's Christmas! <em>· cozy gathering at Beer &amp; Wine</em></h4>
+          <p class="cd-card-meta">Poster &amp; sticker for the seasonal Zrabi Ciszej night — 26.12.2022, 19:00.</p>
+          <div class="created-with">
+            <span class="created-with-label">created with</span>
+            <span class="created-with-icons">
+              <span class="cw-app cw-id" title="Adobe InDesign" aria-label="Adobe InDesign">Id</span>
+              <span class="cw-app cw-ai" title="Adobe Illustrator" aria-label="Adobe Illustrator">Ai</span>
+            </span>
+          </div>
+        </footer>
+      </article>
+    </div>
+
+    <!-- Social media — Instagram feed evidence -->
+    <div class="cd-cards one">
+      <article class="cd-card zc-social-card">
+        <header class="cd-card-head">
+          <span class="cd-eyebrow">
+
+@ZRABI.CISZEJ</span>
+          <span class="cd-num">03</span>
+        </header>
+        <div class="zc-social-grid">
+          <div class="zc-social-copy">
+            <span class="zc-social-tag">Social media</span>
+            <p class="zc-social-lead">I created content for Instagram and documented live performances. The platform reflects Belarusian music and helps build a strong, engaged community.</p>
+            <div class="zc-social-year">2022</div>
+            <ul class="zc-social-tags">
+              <li>Content strategy</li>
+              <li>Social media design</li>
+              <li>Live event photography</li>
+              <li>Community engagement</li>
+            </ul>
+          </div>
+          <figure class="zc-social-art">
+            <image-slot id="zc-social" class="zc-social-slot" fit="contain" shape="rounded" radius="12" placeholder="Instagram feed — 3×3 grid + phone preview"></image-slot>
+            <div class="created-with cd-art-stack">
+              <span class="created-with-label">created with</span>
+              <span class="created-with-icons">
+                <span class="cw-app cw-figma" title="Figma" aria-label="Figma">Fi</span>
+              </span>
+            </div>
+          </figure>
+        </div>
+      </article>
+    </div>
+
+    <div class="cd-foot">
+      <div class="cd-foot-col">
+        <span class="cd-eyebrow">What I did</span>
+        <p>Built the visual identity around a typographic system that could carry posters, t-shirts, social posts, and venue signage with the same rhythm. Wrote guidelines that kept physical and digital coherent across nine months of events.</p>
+      </div>
+      <div class="cd-foot-col">
+        <span class="cd-eyebrow">Why it matters</span>
+        <p>"Make it quieter" wasn't a tagline — it was a posture. The visuals had to feel intimate without becoming precious; rooted in Belarusian culture without becoming nostalgic.</p>
+      </div>
+      <div class="cd-foot-col">
+        <span class="cd-eyebrow">Scope</span>
+        <ul class="cd-outcomes">
+          <li><em>9mo</em><span>Continuous events</span></li>
+          <li><em>P&amp;D</em><span>Print &amp; digital</span></li>
+          <li><em>Sys</em><span>Visual guidelines</span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ─── ABOUT ──────────────────────────────────────── -->
+<section class="wrap section" id="about" data-screen-label="About">
+  <div class="frame">
+    <div class="section-head">
+      <span class="cd-eyebrow">ABOUT</span>
+      <span class="cd-eyebrow muted">A short read</span>
+    </div>
+
+    <div class="about">
+      <div class="about-photo">
+        <img src="assets/portrait.png" alt="Portrait of Arina Zhuravskaya" class="about-photo-img" style="height: 425px" />
+      </div>
+      <div class="about-body">
+        <p class="lead">Hi, my name is Arina</p>
+        <p>I'm a product &amp; graphic designer with 3+ years across pharma, e-commerce, and brand work. Currently embedded with AstraZeneca via Greenpark Digital; previously three years remote with Angel Trade Co. in Hong Kong.</p>
+        <p>
+</p>
+
+        <div class="langs-inline">
+          <span class="ling"><span class="word">Прывітанне</span><span class="lvl">BE · native</span></span>
+          <span class="ling"><span class="word">Привет</span><span class="lvl">RU · native</span></span>
+          <span class="ling"><span class="word">Cześć</span><span class="lvl">PL · B2</span></span>
+          <span class="ling"><span class="word">Hello</span><span class="lvl">EN · B2</span></span>
+          <span class="ling"><span class="word">Hallo</span><span class="lvl">DE · B1</span></span>
+          <span class="ling"><span class="word">こんにちは</span><span class="lvl">JP · basic</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="frame skills-frame">
+    <div class="section-head" style="gap: 0px; margin: 0px 856px 28px 0px">
+      <span class="cd-eyebrow">SKILLS</span>
+      <span class="cd-eyebrow">Tools</span>
+      <span class="cd-eyebrow muted">
+</span>
+    </div>
+    <div class="skill-row">
+      <span class="k">Design</span>
+      <span class="v">Figma · Adobe Creative Suite (Photoshop, Illustrator, InDesign, After Effects)</span>
+    </div>
+    <div class="skill-row">
+      <span class="k">Presentation</span>
+      <span class="v">PowerPoint (advanced) · Word · Excel · data-to-chart conversion</span>
+    </div>
+    <div class="skill-row">
+      <span class="k">Web &amp; email</span>
+      <span class="v">HTML · CSS · basic React · Firebase · Knak</span>
+    </div>
+    <div class="skill-row">
+      <span class="k">AI workflow</span>
+      <span class="v">Adobe Firefly · Claude · Figma AI · Synthesia · Lovable · Stitch</span>
+    </div>
+    <div class="skill-row">
+      <span class="k">Collaboration</span>
+      <span class="v">Jira · Miro · Slack · Microsoft Teams · Agile workflows</span>
+    </div>
+    <div class="skill-row">
+      <span class="k">Education</span>
+      <span class="v">B.A. New Media Arts · PJAIT Warsaw · 2022 — 2025 · GPA 4.6 / 5.0</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ────────────────────────────────────── -->
+<section class="wrap section" id="contact" data-screen-label="Contact">
+  <div class="frame contact-frame">
+    <span class="cd-eyebrow">CONTACT</span>
+    <h2 class="contact-h" aria-label="Let's make something.">Let's <em>make</em> something.</h2>
+
+    <div class="contact-row">
+      <a class="contact-card" href="mailto:arizhuravskaya@gmail.com">
+        <span class="k">Email</span>
+        <span class="v">arizhuravskaya@gmail.com</span>
+      </a>
+      <a class="contact-card" href="tel:+48572120478">
+        <span class="k">Phone</span>
+        <span class="v">+48 572 120 478</span>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/arina-zhurauskaya/" target="_blank" rel="noopener noreferrer">
+        <span class="k">LinkedIn</span>
+        <span class="v">/in/arina-zhurauskaya</span>
+      </a>
+      <a class="contact-card" href="https://www.behance.net/arinazhuravs1" target="_blank" rel="noopener noreferrer">
+        <span class="k">Behance</span>
+        <span class="v">/arinazhuravs1</span>
+      </a>
+    </div>
+
+    <div class="foot">
+      <span>© 2026 Arina Zhuravskaya · Warsaw</span>
+      <span class="center">Last updated · May 2026</span>
+      <span class="right"><a href="#nav">↑ Back to top</a></span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SCRIPTS ────────────────────────────────────── -->
+<script src="image-slot.js"></script>
+
+<script>
+  // Mobile nav hamburger toggle
+  (() => {
+    const burger = document.getElementById('nav-burger');
+    const navEl = document.getElementById('nav');
+    const right = document.getElementById('nav-right');
+    if (!burger || !navEl || !right) return;
+    const close = () => {
+      navEl.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', 'false');
+      burger.setAttribute('aria-label', 'Open menu');
+    };
+    const open = () => {
+      navEl.classList.add('is-open');
+      burger.setAttribute('aria-expanded', 'true');
+      burger.setAttribute('aria-label', 'Close menu');
+    };
+    burger.addEventListener('click', () => {
+      if (navEl.classList.contains('is-open')) close(); else open();
+    });
+    right.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  })();
+
+  // Selected work — stagger fade-in on first load (per tab)
+  (() => {
+    const list = document.getElementById('worklist');
+    if (!list) return;
+    const KEY = 'worklist-intro-seen';
+    try {
+      if (sessionStorage.getItem(KEY)) return;
+      sessionStorage.setItem(KEY, '1');
+    } catch (_) {
+      // sessionStorage unavailable (private mode) — still animate
+    }
+    list.classList.add('worklist-intro');
+  })();
+
+  // Nav border on scroll
+  const navEl = document.getElementById('nav');
+  const onScroll = () => navEl.classList.toggle('scrolled', window.scrollY > 8);
+  document.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Scroll-spy nav (IntersectionObserver — 50% threshold)
+  (() => {
+    const navLinks = document.querySelectorAll('.nav .right a[href^="#"]');
+    if (!navLinks.length) return;
+    const map = new Map();
+    navLinks.forEach(a => map.set(a.getAttribute('href').slice(1), a));
+
+    const trackedIds = ['work', 'about', 'contact'];
+    const caseSections = Array.from(document.querySelectorAll('[id^="case-"]'));
+    const observed = [];
+    trackedIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observed.push(el);
+    });
+    // Case sections also count as "work"
+    caseSections.forEach(el => observed.push(el));
+
+    const visible = new Set();
+    const setActive = () => {
+      // Pick the section with the largest visible ratio (already filtered by 50% threshold)
+      let bestId = null;
+      let bestTop = Infinity;
+      visible.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const top = el.getBoundingClientRect().top;
+        if (top < bestTop) { bestTop = top; bestId = id; }
+      });
+      navLinks.forEach(a => a.classList.remove('active'));
+      if (!bestId) return;
+      const navKey = (bestId === 'work' || bestId.startsWith('case-')) ? 'work' : bestId;
+      map.get(navKey)?.classList.add('active');
+    };
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting && e.intersectionRatio >= 0.5) {
+          visible.add(e.target.id);
+        } else {
+          visible.delete(e.target.id);
+        }
+      });
+      setActive();
+    }, { threshold: [0, 0.5, 1] });
+
+    observed.forEach(el => io.observe(el));
+  })();
+
+  // Brand-book toggle (Daheim · THE SYSTEM)
+  (() => {
+    const strip = document.querySelector('.dhs-strip');
+    const button = document.querySelector('.dhs-toggle');
+    const label = button?.querySelector('.dhs-toggle-label');
+    const arrow = button?.querySelector('.dhs-toggle-arrow');
+    const shown = document.querySelector('.dhs-card-count .dhs-shown');
+    const header = document.querySelector('.dhs-head');
+    if (!strip || !button) return;
+
+    const setState = (expanded) => {
+      strip.dataset.state = expanded ? 'expanded' : 'collapsed';
+      button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      if (label) label.textContent = expanded ? 'Collapse' : 'Expand brandbook';
+      if (arrow) arrow.textContent = expanded ? '↑' : '↓';
+      if (shown) shown.textContent = expanded ? '8' : '1';
+    };
+
+    button.addEventListener('click', () => {
+      const wasExpanded = strip.dataset.state === 'expanded';
+      setState(!wasExpanded);
+
+      if (wasExpanded && header) {
+        // Collapsing — restore the section header into view, accounting for fixed nav
+        const navH = (document.getElementById('nav')?.offsetHeight) || 80;
+        const top = window.scrollY + header.getBoundingClientRect().top - navH - 24;
+        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+      }
+    });
+  })();
+
+  // Daheim videos — restart from beginning when entering the section
+  (() => {
+    const videos = document.querySelectorAll('.dh-web-video, .dh-pub-video, .kd-motion-video');
+    if (!videos.length) return;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        const video = e.target;
+        if (e.isIntersecting) {
+          video.currentTime = 0;
+          video.play().catch(() => { /* autoplay blocked — ignore */ });
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.35 });
+    videos.forEach((v) => io.observe(v));
+  })();
+
+  // Language pills — load-in cascade, then traveling highlight loop
+  (() => {
+    const group = document.querySelector('.langs-inline');
+    if (!group) return;
+    const items = Array.from(group.querySelectorAll('.ling'));
+    if (!items.length) return;
+    const reduced = matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) return;
+
+    // Phase 1 — cascade in: each item turns orange 200ms apart
+    items.forEach((el, i) => {
+      setTimeout(() => el.classList.add('is-active'), i * 200);
+    });
+
+    // Phase 2 — traveling highlight loop (one at a time)
+    const LOAD_DURATION = items.length * 200 + 300; // ~1.5s
+    const STEP = 600;
+    let idx = 0;
+    let timer = null;
+    let paused = false;
+
+    const tick = () => {
+      items.forEach((el, i) => el.classList.toggle('is-active', i === idx));
+      idx = (idx + 1) % items.length;
+    };
+
+    const start = () => {
+      if (timer) return;
+      tick();
+      timer = setInterval(() => {
+        if (!paused) tick();
+      }, STEP);
+    };
+
+    setTimeout(start, LOAD_DURATION);
+
+    // Pause on hover
+    group.addEventListener('mouseenter', () => { paused = true; });
+    group.addEventListener('mouseleave', () => { paused = false; });
+  })();
+
+  // Cursor-following work-list preview
+  (() => {
+    const preview = document.getElementById('preview');
+    const items = document.querySelectorAll('.worklist a.item');
+    const frames = preview.querySelectorAll('.pframe');
+    if (matchMedia('(hover: none)').matches) return;
+
+    let raf = null, mx = 0, my = 0, curX = 0, curY = 0;
+    const tick = () => {
+      curX += (mx - curX) * 0.18;
+      curY += (my - curY) * 0.18;
+      preview.style.left = curX + 'px';
+      preview.style.top = curY + 'px';
+      raf = requestAnimationFrame(tick);
+    };
+
+    document.addEventListener('mousemove', (e) => {
+      mx = e.clientX + 60;
+      my = e.clientY;
+      if (!raf) raf = requestAnimationFrame(tick);
+    });
+
+    items.forEach((item) => {
+      item.addEventListener('mouseenter', () => {
+        const idx = item.dataset.preview;
+        frames.forEach(f => f.classList.toggle('active', f.dataset.frame === idx));
+        preview.classList.add('visible');
+      });
+      item.addEventListener('mouseleave', () => {
+        preview.classList.remove('visible');
+      });
+    });
+  })();
+</script>
+
+<!-- Tweaks (React) -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="tweaks.jsx"></script>
+
+</body>
+</html>

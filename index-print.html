@@ -1,0 +1,1150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Arina Zhuravskaya — Product & Graphic Designer</title>
+<meta name="description" content="Product & graphic designer with 3+ years across pharma, e-commerce, and brand. Based in Warsaw." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+
+<style>
+  /* ───────── Print overrides ───────── */
+  @page {
+    size: A4 portrait;
+    margin: 12mm 10mm;
+  }
+
+  @media print {
+    html, body {
+      background: #060604 !important;
+      color: #FAFAF7 !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+      scroll-behavior: auto !important;
+    }
+    *, *::before, *::after {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      animation: none !important;
+      transition: none !important;
+      text-shadow: none !important;
+    }
+
+    /* Hide the interactive nav + cursor preview */
+    .nav, #preview { display: none !important; }
+
+    /* Hide non-print affordances */
+    .scroll-cue, .cd-back, .nav-link-hide { display: none !important; }
+
+    /* Open every <details> so "Read more" content prints */
+    details { display: block !important; }
+    details > summary { display: none !important; }
+    details[open] .dh-more-body,
+    .dh-more-body { display: grid !important; padding-top: 12px !important; }
+
+    /* Hero spacing pulls below the (now-hidden) fixed nav */
+    .hero { padding-top: 0 !important; }
+    section.wrap:first-of-type { padding-top: 0 !important; }
+
+    /* Page-break strategy: one case study per page */
+    #case-01, #case-02, #case-03, #case-04, #case-05, #case-06,
+    #about, #contact {
+      break-before: page;
+      page-break-before: always;
+    }
+    .case-dark, .wrap.section { break-inside: avoid-page; }
+
+    /* Cards / grids — don't split mid-card */
+    .cd-card, .cd-foot, .dh-section, .stat,
+    .dh-stack-card, .dh-strip-item, .dh-cat-hero,
+    .dh-pack-row, .dh-stickers-img, .contact-card,
+    .skill-row, .worklist a.item, .about, .frame {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    /* Disable sticky stack — flow as vertical list */
+    .dh-stack {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 12px !important;
+    }
+    .dh-stack-card {
+      position: static !important;
+      top: auto !important;
+      height: auto !important;
+      margin-bottom: 0 !important;
+      box-shadow: none !important;
+      page-break-inside: avoid;
+    }
+    .dh-stack-art {
+      aspect-ratio: 16 / 10;
+      min-height: 0;
+    }
+
+    /* Horizontal brandbook strip → vertical 2-col grid */
+    .dh-strip {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 10px !important;
+      overflow: visible !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      scroll-snap-type: none !important;
+    }
+    .dh-strip-item {
+      width: auto !important;
+      aspect-ratio: 4 / 3;
+    }
+
+    /* Drop hover-only overlays / cursor follower */
+    .preview { display: none !important; }
+
+    /* Video poster fallback (videos don't print frames reliably) */
+    video {
+      background: #000;
+    }
+    video::-webkit-media-controls { display: none !important; }
+
+    /* Make sure dark frames retain backgrounds */
+    .frame, .cd-card, .cd-foot, .contact-card, .at-cinematic, .dh-stack-card {
+      background: #060604 !important;
+      box-shadow: none !important;
+    }
+
+    /* Avoid orphan headers */
+    h1, h2, h3, h4, .cd-wordmark, .at-wordmark, .big-wordmark {
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+
+    /* Cap oversized display type so it doesn't blow off the page */
+    .big-wordmark, .cd-wordmark, .at-wordmark {
+      font-size: 64pt !important;
+      line-height: 0.88 !important;
+    }
+    .contact-h {
+      font-size: 56pt !important;
+      line-height: 0.95 !important;
+    }
+    .hero-side, .cd-intro { padding-bottom: 0 !important; }
+
+    /* Cinematic hero — collapse to stacked layout for print */
+    .at-cinematic-grid {
+      grid-template-columns: 1fr !important;
+      padding: 24px !important;
+      min-height: 0 !important;
+      row-gap: 18px !important;
+    }
+    .at-c-left, .at-c-image {
+      grid-column: 1 / -1 !important;
+      grid-row: auto !important;
+    }
+    .at-c-image img {
+      width: 100% !important;
+      height: auto !important;
+      max-height: 420px !important;
+      transform: none !important;
+      object-fit: contain !important;
+      margin: 0 auto !important;
+    }
+    .dh-c-image {
+      position: relative !important;
+      inset: auto !important;
+      height: auto !important;
+    }
+    .dh-c-left {
+      width: 100% !important;
+      min-height: 0 !important;
+      padding: 24px !important;
+    }
+
+    /* Stats — print as 2x2 to fit narrow page */
+    .stats { grid-template-columns: 1fr 1fr !important; }
+    .stats .stat:nth-child(2) { border-right: 0 !important; }
+    .stats .stat:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,0.10) !important; }
+  }
+</style>
+
+</head>
+<body>
+
+<!-- ─── NAV ────────────────────────────────────────── -->
+<nav class="nav" id="nav">
+  <div class="left">
+    <span class="name">Arina Zhuravskaya</span>
+    <span class="role">— Product &amp; Graphic Designer</span>
+  </div>
+  <div class="right">
+    <a href="#work">Work</a>
+    <a href="#about" class="nav-link-hide">About</a>
+    <a href="#contact">Contact</a>
+    <a href="mailto:arizhuravskaya@gmail.com" class="btn primary" style="padding:8px 16px;font-size:13px;">Get in touch <span class="arrow">→</span></a>
+  </div>
+</nav>
+
+<!-- ─── HERO ───────────────────────────────────────── -->
+<section class="hero wrap" data-screen-label="Hero">
+  <div class="frame hero-frame">
+    <div class="eyebrow-row">
+      <span class="cd-eyebrow">+ Portfolio · 2026</span>
+      <span class="pill"><span class="dot"></span>Available · mid–senior roles</span>
+    </div>
+
+    <div class="hero-grid">
+      <h1 class="big-wordmark">ARINA<br />ZHURAVSKAYA</h1>
+      <div class="hero-side">
+        <p class="hero-desc">Product &amp; graphic designer working at the seam between pharma, e-commerce, and brand. I build systems where every decision earns its place.</p>
+        <div class="hero-dates">Warsaw, Poland · 2022 — present</div>
+        <ul class="cd-tags">
+          <li>Product &amp; visual design</li>
+          <li>Design systems &amp; identity</li>
+          <li>Data visualisation</li>
+          <li>Motion &amp; print</li>
+        </ul>
+        <div class="cta-row">
+          <a href="#work" class="btn primary">Selected work <span class="arrow">→</span></a>
+          <a href="mailto:arizhuravskaya@gmail.com" class="btn">Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── STATS ──────────────────────────────────────── -->
+<div class="wrap stats-wrap">
+  <div class="frame stats-frame">
+    <div class="stats">
+      <div class="stat">
+        <span class="cd-eyebrow">Time saved</span>
+        <span class="n">70%</span>
+        <span class="desc">Faster booth design — modular system, 1 week → 2 days</span>
+      </div>
+      <div class="stat">
+        <span class="cd-eyebrow">Trade shows</span>
+        <span class="n">4</span>
+        <span class="desc">International · 3 continents · IFA · GITEX · ITC</span>
+      </div>
+      <div class="stat">
+        <span class="cd-eyebrow">Markets</span>
+        <span class="n">7</span>
+        <span class="desc">EMEA campaigns · AstraZeneca</span>
+      </div>
+      <div class="stat">
+        <span class="cd-eyebrow">Combined reach</span>
+        <span class="n">82K</span>
+        <span class="desc">AZ Poland awareness campaigns</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── WORK INDEX ─────────────────────────────────── -->
+<section class="wrap section" id="work" data-screen-label="Work">
+  <div class="frame">
+    <div class="section-head">
+      <span class="cd-eyebrow">+ Selected work</span>
+      <span class="cd-eyebrow muted">2022 — 2026 · Six projects</span>
+    </div>
+
+    <div class="worklist" id="worklist">
+      <a class="item" href="#case-01" data-preview="0">
+        <span class="num">01</span>
+        <span class="title">AstraZeneca</span>
+        <span class="desc">Medical data viz, HCP portal &amp; campaigns · via Greenpark</span>
+        <span class="year">2026 →</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="item" href="#case-02" data-preview="1">
+        <span class="num">02</span>
+        <span class="title">Angel Trade</span>
+        <span class="desc">Three-year design partnership · trade shows + identity</span>
+        <span class="year">2022 – 25</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="item" href="#case-03" data-preview="2">
+        <span class="num">03</span>
+        <span class="title">Daheim</span>
+        <span class="desc">Diploma · visual identity &amp; editorial system for a Polish handmade brand</span>
+        <span class="year">2025</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="item" href="#case-04" data-preview="3">
+        <span class="num">04</span>
+        <span class="title">Kazki dla Dzivusi</span>
+        <span class="desc">Belarusian children's podcast · identity, motion, audio</span>
+        <span class="year">2024 – 25</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="item" href="#case-05" data-preview="4">
+        <span class="num">05</span>
+        <span class="title">@zabiziapu</span>
+        <span class="desc">Podcast on mental health &amp; social issues · visual system</span>
+        <span class="year">2023</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="item" href="#case-06" data-preview="5">
+        <span class="num">06</span>
+        <span class="title">Zrabi Ciszej</span>
+        <span class="desc">Belarusian language &amp; music initiative · identity</span>
+        <span class="year">2022 – 23</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Cursor preview -->
+<div class="preview" id="preview">
+  <div class="pframe" data-frame="0"><image-slot id="prev-az" shape="rect" placeholder="AstraZeneca preview"></image-slot></div>
+  <div class="pframe" data-frame="1"><image-slot id="prev-at" src="assets/at-banner-hero.png" shape="rect" placeholder="Angel Trade preview"></image-slot></div>
+  <div class="pframe" data-frame="2"><image-slot id="prev-dip" shape="rect" placeholder="Daheim preview"></image-slot></div>
+  <div class="pframe" data-frame="3"><image-slot id="prev-kd" shape="rect" placeholder="Kazki preview"></image-slot></div>
+  <div class="pframe" data-frame="4"><image-slot id="prev-zb" shape="rect" placeholder="Zabiziapu preview"></image-slot></div>
+  <div class="pframe" data-frame="5"><image-slot id="prev-zc" shape="rect" placeholder="Zrabi Ciszej preview"></image-slot></div>
+</div>
+
+<!-- ═════════════════════════════════════════════════ -->
+<!-- ═══ CASE STUDIES ═══════════════════════════════════ -->
+<!-- ═════════════════════════════════════════════════ -->
+
+<!-- 01 — AstraZeneca -->
+<section class="case-dark wrap" id="case-01" data-screen-label="Case 01 — AstraZeneca">
+  <div class="frame">
+    <a class="cd-back" href="#work">← Selected work</a>
+    <div class="cd-head">
+      <div class="cd-wordmark">ASTRA<br />ZENECA</div>
+      <div class="cd-intro">
+        <p class="cd-desc">Medical data, decks &amp; HCP portal design — embedded with AstraZeneca's creative studio across 7 EMEA markets.</p>
+        <div class="cd-dates">Feb 2026 — present · via Greenpark Digital</div>
+        <ul class="cd-tags">
+          <li>Data visualisation</li>
+          <li>Pharma compliance</li>
+          <li>Email · Knak</li>
+          <li>HCP portal design</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="frame frame-art">
+    <image-slot id="az-hero" style="aspect-ratio: 16/9" shape="rounded" radius="10" placeholder="Hero — flagship deck or HCP portal screenshot"></image-slot>
+  </div>
+
+  <div class="cd-cards">
+    <article class="cd-card">
+      <header class="cd-card-head">
+        <span class="cd-eyebrow">Awareness campaigns</span>
+        <span class="cd-num">01</span>
+      </header>
+      <div class="cd-card-art light">
+        <image-slot id="az-aware" style="aspect-ratio: 4/3" fit="contain" shape="rect" placeholder="Zwrotnik Raka / Nie Wyglądam visual"></image-slot>
+      </div>
+      <footer class="cd-card-foot">
+        <h4>Zwrotnik Raka &amp; Nie Wyglądam</h4>
+        <p class="cd-card-meta">Post and article designs for cancer &amp; asthma awareness platforms — combined reach over 82K.</p>
+        <span class="cd-card-link">Social · article · print <span class="arrow">→</span></span>
+      </footer>
+    </article>
+
+    <article class="cd-card">
+      <header class="cd-card-head">
+        <span class="cd-eyebrow">HCP portal</span>
+        <span class="cd-num">02</span>
+      </header>
+      <div class="cd-card-art">
+        <image-slot id="az-portal" style="aspect-ratio: 4/3" fit="cover" shape="rect" placeholder="Healthcare Professional portal"></image-slot>
+      </div>
+      <footer class="cd-card-foot">
+        <h4>Migrated within the system.</h4>
+        <p class="cd-card-meta">Produced &amp; migrated website visuals for AZ Poland's HCP portal — same design system, regulatory-safe.</p>
+        <span class="cd-card-link">Web · within DS <span class="arrow">→</span></span>
+      </footer>
+    </article>
+  </div>
+
+  <div class="cd-foot">
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">What I did</span>
+      <p>Design client-facing &amp; educational decks. Translate medical data into hierarchy-led visualisations. Migrate website visuals into AZ Poland's HCP portal within the existing design system. Deliver print materials &amp; Knak email campaigns across 7 markets.</p>
+    </div>
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">Why it matters</span>
+      <p>Pharma communication has a high cost of being misread. The job isn't to make charts pretty — it's to remove every ambiguity between a clinical insight and the person who has to act on it.</p>
+    </div>
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">Outcomes</span>
+      <ul class="cd-outcomes">
+        <li><em>7</em><span>EMEA markets</span></li>
+        <li><em>60K</em><span>Zwrotnik Raka reach</span></li>
+        <li><em>22K</em><span>Nie Wyglądam reach</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- 02 — Angel Trade -->
+<section class="case-dark case-02-hero-section" id="case-02" data-screen-label="Case 02 — Angel Trade">
+
+  <!-- Cinematic full-bleed hero -->
+  <div class="at-cinematic">
+    <a class="cd-back" href="#work">← Selected work</a>
+
+    <div class="at-cinematic-grid">
+      <!-- Left: wordmark + intro -->
+      <div class="at-c-left">
+        <h2 class="at-wordmark">ANGEL<br />TRADE</h2>
+        <p class="at-desc">A three-year exhibition system built across Europe, Asia &amp; the MENA region.</p>
+        <div class="at-c-meta">
+          <div class="at-dates">2022 — 2025</div>
+          <ul class="at-tags">
+            <li>Brand system</li>
+            <li>Exhibition design</li>
+            <li>Campaign graphics</li>
+            <li>Print production</li>
+          </ul>
+        </div>
+        <a class="scroll-cue" href="#case-02-content">
+          <span class="scroll-cue-ring">↓</span>
+          <span>Scroll to explore</span>
+        </a>
+      </div>
+
+      <!-- Middle: hero image -->
+      <div class="at-c-image">
+        <img src="assets/at-stand-hero.png" alt="Angel Trade exhibition booth" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Continuing case content -->
+  <div id="case-02-content" class="case-02-rest">
+
+    <!-- Hero: motion video -->
+    <div class="frame frame-flush">
+      <div class="cd-hero">
+        <video src="assets/at-motion.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="cd-hero-meta">
+          <span class="cd-eyebrow">Motion design · ITC Malta 2025</span>
+          <span class="cd-eyebrow muted">on-screen booth loop</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature card -->
+    <div class="cd-cards one">
+      <article class="cd-card">
+        <header class="cd-card-head">
+          <span class="cd-eyebrow">IFA Berlin 2024</span>
+          <span class="cd-num">01</span>
+        </header>
+        <div class="cd-card-art">
+          <img src="assets/at-banner-hero.png" alt="Hanging banner, IFA Berlin 2024" />
+        </div>
+        <footer class="cd-card-foot">
+          <h4>Large-scale hanging banner</h4>
+          <p class="cd-card-meta">Suspended above the hall — visible across the entire exhibition floor.</p>
+          <span class="cd-card-link">Booth + brand <span class="arrow">→</span></span>
+        </footer>
+      </article>
+    </div>
+
+    <!-- Full-width evidence shot -->
+    <div class="frame frame-flush">
+      <div class="cd-evidence">
+        <img src="assets/at-banner-full.png?v=2" alt="Angel Trade lounge-zone billboard" />
+        <div class="cd-evidence-cap">
+          <span class="cd-eyebrow">Installed · Lounge zone billboard</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Magazine ad -->
+    <div class="frame">
+      <div class="cd-mag">
+        <div class="cd-mag-img">
+          <img src="assets/at-magazine-ad.jpg?v=2" alt="Magazine ad — ITC Malta 2025 catalogue" />
+        </div>
+        <div class="cd-mag-note">
+          <span class="cd-eyebrow">Print · ITC Malta 2025</span>
+          <h4>Catalogue spread</h4>
+          <p>Two-page ad for the official exhibitor catalogue. Localised Spanish copy, scannable QR for WhatsApp follow-up, optimised for the table-top reading angle.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cd-foot">
+      <div class="cd-foot-col">
+        <span class="cd-eyebrow">What I did</span>
+        <p>Owned visual design end-to-end for ITC Malta 2025, GITEX Global 2024 (Dubai), and IFA Berlin 2024 &amp; 2025. Booth graphics, hanging banners, signage, presentation decks, motion graphics, magazine ads, and on-screen visuals.</p>
+      </div>
+      <div class="cd-foot-col">
+        <span class="cd-eyebrow">Why it matters</span>
+        <p>A 30-square-metre booth in a hall of 600 has to do three things at once: announce itself across an aisle, hold up to a five-second walk-past, and reward the visitor who stops to read. The system let the team focus on what was actually new each show.</p>
+      </div>
+      <div class="cd-foot-col">
+        <span class="cd-eyebrow">Outcomes</span>
+        <ul class="cd-outcomes">
+          <li><em>70%</em><span>Faster booth design</span></li>
+          <li><em>4</em><span>International shows</span></li>
+          <li><em>3</em><span>Continents</span></li>
+          <li><em>3 yrs</em><span>Remote partnership</span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 03 — Daheim (diploma) -->
+<section class="case-dark case-03-hero-section" id="case-03" data-screen-label="Case 03 — Daheim">
+
+  <!-- Cinematic full-bleed hero -->
+  <div class="at-cinematic dh-cinematic">
+    <a class="cd-back" href="#work">— Selected work</a>
+
+    <div class="at-cinematic-grid dh-cinematic-grid">
+      <div class="at-c-left dh-c-left">
+        <h2 class="at-wordmark">DAHEIM</h2>
+        <p class="at-desc"><em>Daheim</em> makes goods to help you build a nest — a place of comfort and self-expression, crafted by local makers, designed to last.</p>
+        <div class="at-c-meta">
+          <div class="at-dates">2022 — 2025</div>
+          <ul class="at-tags">
+            <li>Brand identity</li>
+            <li>Packaging design</li>
+            <li>Label design</li>
+            <li>Product photography</li>
+          </ul>
+        </div>
+        <a class="scroll-cue" href="#case-03-content">
+          <span class="scroll-cue-ring">↓</span>
+          <span>Scroll to explore</span>
+        </a>
+      </div>
+
+      <div class="at-c-image dh-c-image">
+        <img src="assets/daheim-hero.png" alt="Daheim candle collection — Noir and Vero" />
+      </div>
+    </div>
+  </div>
+
+  <div id="case-03-content" class="case-02-rest dh-content">
+
+    <!-- 2 · SYSTEM GLANCE — plain vertical scroll ─────────── -->
+    <div class="dh-section dh-glance">
+      <div class="dh-label-row">
+        <span class="cd-eyebrow">+ System · 01</span>
+        <span class="cd-eyebrow muted">Glance</span>
+      </div>
+      <div class="dh-stack">
+        <figure class="dh-stack-card">
+          <div class="dh-stack-art">
+            <image-slot id="dh-stack-1" class="dh-img" fit="contain" shape="rect" placeholder="brandbookArina6.pdf · page 1 · Wprowadzenie / intro"></image-slot>
+          </div>
+          <figcaption class="dh-stack-meta">
+            <span class="cd-eyebrow">01 · Brandbook</span>
+            <span class="dh-stack-cap">Intro spread — Wprowadzenie</span>
+          </figcaption>
+        </figure>
+        <figure class="dh-stack-card">
+          <div class="dh-stack-art">
+            <image-slot id="dh-stack-2" class="dh-img" fit="contain" shape="rect" placeholder="publikacjaA5.pdf · pages 4-5 · table of contents spread"></image-slot>
+          </div>
+          <figcaption class="dh-stack-meta">
+            <span class="cd-eyebrow">02 · Catalog</span>
+            <span class="dh-stack-cap">Table of contents — the orange loop</span>
+          </figcaption>
+        </figure>
+        <figure class="dh-stack-card">
+          <div class="dh-stack-art">
+            <image-slot id="dh-stack-3" class="dh-img" fit="cover" shape="rect" placeholder="Noir + Vero candle packaging"></image-slot>
+          </div>
+          <figcaption class="dh-stack-meta">
+            <span class="cd-eyebrow">03 · Packaging</span>
+            <span class="dh-stack-cap">Noir &amp; Vero — wave frame on labels</span>
+          </figcaption>
+        </figure>
+        <figure class="dh-stack-card">
+          <div class="dh-stack-art">
+            <image-slot id="dh-stack-4" class="dh-img" fit="contain" shape="rect" placeholder="naklejki3razy.pdf · full sticker sheet"></image-slot>
+          </div>
+          <figcaption class="dh-stack-meta">
+            <span class="cd-eyebrow">04 · Stickers</span>
+            <span class="dh-stack-cap">Brand mark — three across</span>
+          </figcaption>
+        </figure>
+      </div>
+      <p class="dh-caption">One looping line, four surfaces.</p>
+    </div>
+
+    <!-- 3 · BRANDBOOK ──────────────────────────────────── -->
+    <div class="dh-section dh-brandbook">
+      <div class="dh-label-row">
+        <span class="cd-eyebrow">+ Brandbook · 02</span>
+        <span class="cd-eyebrow muted">Scroll →</span>
+      </div>
+      <div class="dh-strip" tabindex="0" aria-label="Brandbook spreads — scroll horizontally">
+        <figure class="dh-strip-item">
+          <image-slot id="dh-bb-1" class="dh-img" fit="contain" shape="rect" placeholder="brandbookArina6.pdf · Intro spread"></image-slot>
+          <figcaption class="dh-strip-cap">Intro</figcaption>
+        </figure>
+        <figure class="dh-strip-item">
+          <image-slot id="dh-bb-2" class="dh-img" fit="contain" shape="rect" placeholder="brandbookArina6.pdf · Logo spread"></image-slot>
+          <figcaption class="dh-strip-cap">Logo</figcaption>
+        </figure>
+        <figure class="dh-strip-item">
+          <image-slot id="dh-bb-3" class="dh-img" fit="contain" shape="rect" placeholder="brandbookArina6.pdf · Color palette spread"></image-slot>
+          <figcaption class="dh-strip-cap">Color</figcaption>
+        </figure>
+        <figure class="dh-strip-item">
+          <image-slot id="dh-bb-4" class="dh-img" fit="contain" shape="rect" placeholder="brandbookArina6.pdf · Typography spread"></image-slot>
+          <figcaption class="dh-strip-cap">Typography</figcaption>
+        </figure>
+        <figure class="dh-strip-item">
+          <image-slot id="dh-bb-5" class="dh-img" fit="contain" shape="rect" placeholder="brandbookArina6.pdf · Grid spread"></image-slot>
+          <figcaption class="dh-strip-cap">Grid</figcaption>
+        </figure>
+        <figure class="dh-strip-item">
+          <image-slot id="dh-bb-6" class="dh-img" fit="contain" shape="rect" placeholder="brandbookArina6.pdf · Applications spread"></image-slot>
+          <figcaption class="dh-strip-cap">Applications</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- 4 · CATALOG ────────────────────────────────────── -->
+    <div class="dh-section dh-catalog">
+      <div class="dh-label-row">
+        <span class="cd-eyebrow">+ Catalog · 03</span>
+        <span class="cd-eyebrow muted">A5 · 34 pages</span>
+      </div>
+      <figure class="dh-cat-hero">
+        <image-slot id="dh-cat-hero" class="dh-img" fit="contain" shape="rect" placeholder="publikacjaA5.pdf · pages 4-5 · table of contents with the orange loop"></image-slot>
+      </figure>
+      <div class="dh-cat-grid">
+        <figure class="dh-cat-cell">
+          <image-slot id="dh-cat-1" class="dh-img" fit="contain" shape="rect" placeholder="publikacjaA5.pdf · page 7"></image-slot>
+        </figure>
+        <figure class="dh-cat-cell">
+          <image-slot id="dh-cat-2" class="dh-img" fit="contain" shape="rect" placeholder="publikacjaA5.pdf · page 8"></image-slot>
+        </figure>
+        <figure class="dh-cat-cell">
+          <image-slot id="dh-cat-3" class="dh-img" fit="contain" shape="rect" placeholder="publikacjaA5.pdf · page 14"></image-slot>
+        </figure>
+        <figure class="dh-cat-cell">
+          <image-slot id="dh-cat-4" class="dh-img" fit="contain" shape="rect" placeholder="publikacjaA5.pdf · page 17"></image-slot>
+        </figure>
+      </div>
+      <p class="dh-caption">34-page A5 catalog. 5 product categories. ~30 SKUs.</p>
+    </div>
+
+    <!-- 5 · PACKAGING ──────────────────────────────────── -->
+    <div class="dh-section dh-pack">
+      <div class="dh-label-row">
+        <span class="cd-eyebrow">+ Packaging · 04</span>
+        <span class="cd-eyebrow muted">Noir &amp; Vero</span>
+      </div>
+      <div class="dh-pack-row">
+        <figure class="dh-pack-wide">
+          <image-slot id="dh-pack-1" class="dh-img" fit="cover" shape="rect" placeholder="Noir + Vero candles — wide product shot (tighter crop than hero)"></image-slot>
+        </figure>
+        <figure class="dh-pack-tall">
+          <image-slot id="dh-pack-2" class="dh-img" fit="cover" shape="rect" placeholder="Single candle label · close-up"></image-slot>
+        </figure>
+      </div>
+      <p class="dh-caption">Candle packaging for two scents — Noir and Vero.</p>
+    </div>
+
+    <!-- 6 · STICKERS ───────────────────────────────────── -->
+    <div class="dh-section dh-stickers">
+      <div class="dh-label-row">
+        <span class="cd-eyebrow">+ Stickers · 05</span>
+        <span class="cd-eyebrow muted">Flat sheet</span>
+      </div>
+      <figure class="dh-stickers-img">
+        <image-slot id="dh-stickers" class="dh-img" fit="contain" shape="rect" placeholder="naklejki3razy.pdf · full sticker sheet · flat"></image-slot>
+      </figure>
+      <p class="dh-caption">Brand mark applied across formats.</p>
+    </div>
+
+    <!-- 7 · PROCESS STRIP ──────────────────────────────── -->
+    <div class="dh-section dh-process">
+      <div class="dh-label-row">
+        <span class="cd-eyebrow">+ Process · 06</span>
+        <span class="cd-eyebrow muted">Quiet</span>
+      </div>
+      <div class="dh-process-grid">
+        <figure class="dh-process-cell">
+          <image-slot id="dh-proc-1" class="dh-img" fit="contain" shape="rect" placeholder="Logo sketch"></image-slot>
+        </figure>
+        <figure class="dh-process-cell">
+          <image-slot id="dh-proc-2" class="dh-img" fit="contain" shape="rect" placeholder="Palette test"></image-slot>
+        </figure>
+        <figure class="dh-process-cell">
+          <image-slot id="dh-proc-3" class="dh-img" fit="contain" shape="rect" placeholder="Type pairing"></image-slot>
+        </figure>
+        <figure class="dh-process-cell">
+          <image-slot id="dh-proc-4" class="dh-img" fit="contain" shape="rect" placeholder="Rejected direction"></image-slot>
+        </figure>
+        <figure class="dh-process-cell">
+          <image-slot id="dh-proc-5" class="dh-img" fit="contain" shape="rect" placeholder="Grid study"></image-slot>
+        </figure>
+        <figure class="dh-process-cell">
+          <image-slot id="dh-proc-6" class="dh-img" fit="contain" shape="rect" placeholder="Mark exploration"></image-slot>
+        </figure>
+      </div>
+      <p class="dh-caption">Sketches, palette tests, typographic studies.</p>
+    </div>
+
+    <!-- 8 · MORE (expandable) ──────────────────────────── -->
+    <details class="dh-more">
+      <summary class="dh-more-btn">
+        <span class="dh-more-label">Read more</span>
+        <span class="dh-more-arrow" aria-hidden="true">→</span>
+      </summary>
+      <div class="dh-more-body">
+        <div class="dh-more-col">
+          <span class="cd-eyebrow">Concept</span>
+          <p>Daheim is a small Polish brand of handmade furniture and home objects. The brief: build a visual identity disciplined enough to scale across a brandbook, a catalog, packaging, and stickers, without losing the warmth and craft the brand is selling.</p>
+        </div>
+        <div class="dh-more-col">
+          <span class="cd-eyebrow">Process</span>
+          <p>The unlock was treating a single continuous looping line as a system element rather than decoration. One shape, applied with different weights and contexts: it carries section numbers in the catalog, becomes the wave frame on candle labels, appears as a sticker motif, and sets the rhythm of the brandbook.</p>
+        </div>
+      </div>
+    </details>
+
+    <!-- 9 · FOOTER ─────────────────────────────────────── -->
+    <div class="dh-footer">
+      <span class="dh-foot-line">Defended at PJAIT Warsaw, BA New Media Arts, 2025.</span>
+      <span class="dh-foot-line">GPA 4.6 / 5.0</span>
+      <a class="dh-foot-line dh-foot-next" href="#case-04">Next project <span class="arrow">→</span></a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 04 — Kazki dla Dzivusi -->
+<section class="case-dark wrap" id="case-04" data-screen-label="Case 04 — Kazki dla Dzivusi">
+  <div class="frame">
+    <a class="cd-back" href="#work">← Selected work</a>
+    <div class="cd-head">
+      <div class="cd-wordmark">KAZKI DLA<br />DZIVUSI</div>
+      <div class="cd-intro">
+        <p class="cd-desc">A children's podcast bringing classic Belarusian fairy tales to children &amp; parents living abroad.</p>
+        <div class="cd-dates">Nov 2024 — Jan 2025 · Co-creator</div>
+        <ul class="cd-tags">
+          <li>Visual identity</li>
+          <li>Motion graphics</li>
+          <li>Audio production</li>
+          <li>For diaspora families</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cd-cards">
+    <article class="cd-card">
+      <header class="cd-card-head">
+        <span class="cd-eyebrow">Cover art</span>
+        <span class="cd-num">01</span>
+      </header>
+      <div class="cd-card-art light">
+        <image-slot id="kd-1" style="aspect-ratio: 1" fit="contain" shape="rect" placeholder="Cover art — square"></image-slot>
+      </div>
+      <footer class="cd-card-foot">
+        <h4>Charm the kid. Trust the parent.</h4>
+        <p class="cd-card-meta">A children's identity that reaches both ends of the listening pair.</p>
+        <span class="cd-card-link">Identity <span class="arrow">→</span></span>
+      </footer>
+    </article>
+
+    <article class="cd-card">
+      <header class="cd-card-head">
+        <span class="cd-eyebrow">Motion intros</span>
+        <span class="cd-num">02</span>
+      </header>
+      <div class="cd-card-art">
+        <image-slot id="kd-2" style="aspect-ratio: 1" fit="cover" shape="rect" placeholder="Motion still or character"></image-slot>
+      </div>
+      <footer class="cd-card-foot">
+        <h4>Small films for short attention spans.</h4>
+        <p class="cd-card-meta">Animated episode intros + character treatments for the show's social cuts.</p>
+        <span class="cd-card-link">Motion <span class="arrow">→</span></span>
+      </footer>
+    </article>
+  </div>
+
+  <div class="cd-foot">
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">What I did</span>
+      <p>Co-created the show from the ground up — visual identity, character treatments, episode covers, animated intros. Recorded and edited audio episodes through classic Belarusian fairy tales for a generation growing up outside Belarus.</p>
+    </div>
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">Why it matters</span>
+      <p>Diaspora families are a quiet, underserved audience. The brief was to make Belarusian feel like home — not like homework.</p>
+    </div>
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">Outcomes</span>
+      <ul class="cd-outcomes">
+        <li><em>RU</em><span>Belarusian-language</span></li>
+        <li><em>BE</em><span>Diaspora-facing</span></li>
+        <li><em>Co</em><span>Co-created end-to-end</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- 05 — @zabiziapu -->
+<section class="case-dark wrap" id="case-05" data-screen-label="Case 05 — @zabiziapu">
+  <div class="frame">
+    <a class="cd-back" href="#work">← Selected work</a>
+    <div class="cd-head">
+      <div class="cd-wordmark">@ZABI<br />ZIAPU</div>
+      <div class="cd-intro">
+        <p class="cd-desc">A Belarusian podcast on mental health, social issues &amp; relationships — visual system &amp; video edit.</p>
+        <div class="cd-dates">Jun — Sep 2023</div>
+        <ul class="cd-tags">
+          <li>Custom Figma design system</li>
+          <li>Posts &amp; reels</li>
+          <li>Podcast video edit</li>
+          <li>Cross-platform</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cd-cards three">
+    <article class="cd-card slim">
+      <header class="cd-card-head">
+        <span class="cd-eyebrow">Post system</span>
+        <span class="cd-num">01</span>
+      </header>
+      <div class="cd-card-art">
+        <image-slot id="zb-1" style="aspect-ratio: 4/5" fit="cover" shape="rect" placeholder="Post 1"></image-slot>
+      </div>
+    </article>
+    <article class="cd-card slim">
+      <header class="cd-card-head">
+        <span class="cd-eyebrow">Engagement</span>
+        <span class="cd-num">02</span>
+      </header>
+      <div class="cd-card-art">
+        <image-slot id="zb-2" style="aspect-ratio: 4/5" fit="cover" shape="rect" placeholder="Post 2"></image-slot>
+      </div>
+    </article>
+    <article class="cd-card slim">
+      <header class="cd-card-head">
+        <span class="cd-eyebrow">Reel cover</span>
+        <span class="cd-num">03</span>
+      </header>
+      <div class="cd-card-art">
+        <image-slot id="zb-3" style="aspect-ratio: 4/5" fit="cover" shape="rect" placeholder="Reel cover"></image-slot>
+      </div>
+    </article>
+  </div>
+
+  <div class="cd-foot">
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">What I did</span>
+      <p>Built a custom Figma design system to keep posts, reels, and engagement content coherent across a fast-moving editorial calendar. Edited podcast video for vertical (Reels / TikTok) and horizontal (YouTube) distribution.</p>
+    </div>
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">Why it matters</span>
+      <p>Mental-health conversation deserves a visual register that's neither clinical nor cute. We wanted something that looked like a friend speaking honestly — not a brochure.</p>
+    </div>
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">Surface</span>
+      <ul class="cd-outcomes">
+        <li><em>IG</em><span>Instagram</span></li>
+        <li><em>TT</em><span>TikTok</span></li>
+        <li><em>YT</em><span>YouTube</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- 06 — Zrabi Ciszej -->
+<section class="case-dark wrap" id="case-06" data-screen-label="Case 06 — Zrabi Ciszej">
+  <div class="frame">
+    <a class="cd-back" href="#work">← Selected work</a>
+    <div class="cd-head">
+      <div class="cd-wordmark">ZRABI<br />CISZEJ</div>
+      <div class="cd-intro">
+        <p class="cd-desc">"Make It Quieter" — a Belarusian language &amp; music platform hosting intimate musical gatherings.</p>
+        <div class="cd-dates">Oct 2022 — Jun 2023 · Warsaw</div>
+        <ul class="cd-tags">
+          <li>Visual identity</li>
+          <li>Event posters</li>
+          <li>Social &amp; merch</li>
+          <li>Guidelines</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cd-cards three">
+    <article class="cd-card slim">
+      <header class="cd-card-head">
+        <span class="cd-eyebrow">Event poster</span>
+        <span class="cd-num">01</span>
+      </header>
+      <div class="cd-card-art">
+        <image-slot id="zc-1" style="aspect-ratio: 3/4" fit="cover" shape="rect" placeholder="Event poster 1"></image-slot>
+      </div>
+    </article>
+    <article class="cd-card slim">
+      <header class="cd-card-head">
+        <span class="cd-eyebrow">Event poster</span>
+        <span class="cd-num">02</span>
+      </header>
+      <div class="cd-card-art">
+        <image-slot id="zc-2" style="aspect-ratio: 3/4" fit="cover" shape="rect" placeholder="Event poster 2"></image-slot>
+      </div>
+    </article>
+    <article class="cd-card slim">
+      <header class="cd-card-head">
+        <span class="cd-eyebrow">Event poster</span>
+        <span class="cd-num">03</span>
+      </header>
+      <div class="cd-card-art">
+        <image-slot id="zc-3" style="aspect-ratio: 3/4" fit="cover" shape="rect" placeholder="Event poster 3"></image-slot>
+      </div>
+    </article>
+  </div>
+
+  <div class="cd-foot">
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">What I did</span>
+      <p>Built the visual identity around a typographic system that could carry posters, t-shirts, social posts, and venue signage with the same rhythm. Wrote guidelines that kept physical and digital coherent across nine months of events.</p>
+    </div>
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">Why it matters</span>
+      <p>"Make it quieter" wasn't a tagline — it was a posture. The visuals had to feel intimate without becoming precious; rooted in Belarusian culture without becoming nostalgic.</p>
+    </div>
+    <div class="cd-foot-col">
+      <span class="cd-eyebrow">Scope</span>
+      <ul class="cd-outcomes">
+        <li><em>9mo</em><span>Continuous events</span></li>
+        <li><em>P&amp;D</em><span>Print &amp; digital</span></li>
+        <li><em>Sys</em><span>Visual guidelines</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── ABOUT ──────────────────────────────────────── -->
+<section class="wrap section" id="about" data-screen-label="About">
+  <div class="frame">
+    <div class="section-head">
+      <span class="cd-eyebrow">+ About</span>
+      <span class="cd-eyebrow muted">A short read</span>
+    </div>
+
+    <div class="about">
+      <div class="about-photo">
+        <image-slot id="portrait" shape="rounded" radius="10" placeholder="Drop a portrait (vertical, 4:5)"></image-slot>
+      </div>
+      <div class="about-body">
+        <p class="lead">I design at the seam where editorial discipline meets product thinking — clear to a clinician, clear to a kid listening to a podcast.</p>
+        <p>I'm a product &amp; graphic designer with 3+ years across pharma, e-commerce, and brand work. Currently embedded with AstraZeneca via Greenpark Digital; previously three years remote with Angel Trade Co. in Hong Kong.</p>
+        <p>I grew up moving between languages — Belarusian, Russian, Polish, English, with German and Japanese on the side. Six different ways to say "hello" trains you to notice <em>how</em> something is said, not just what.</p>
+
+        <div class="langs-inline">
+          <span class="ling"><span class="word">Прывітанне</span><span class="lvl">BE · native</span></span>
+          <span class="ling"><span class="word">Привет</span><span class="lvl">RU · native</span></span>
+          <span class="ling"><span class="word">Cześć</span><span class="lvl">PL · B2</span></span>
+          <span class="ling"><span class="word">Hello</span><span class="lvl">EN · B2</span></span>
+          <span class="ling"><span class="word">Hallo</span><span class="lvl">DE · B1</span></span>
+          <span class="ling"><span class="word">こんにちは</span><span class="lvl">JP · basic</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="frame skills-frame">
+    <div class="section-head">
+      <span class="cd-eyebrow">+ Skills &amp; tools</span>
+      <span class="cd-eyebrow muted">What I work with</span>
+    </div>
+    <div class="skill-row">
+      <span class="k">Design</span>
+      <span class="v">Figma · Adobe Creative Suite (Photoshop, Illustrator, InDesign, After Effects)</span>
+    </div>
+    <div class="skill-row">
+      <span class="k">Presentation</span>
+      <span class="v">PowerPoint (advanced) · Word · Excel · data-to-chart conversion</span>
+    </div>
+    <div class="skill-row">
+      <span class="k">Web &amp; email</span>
+      <span class="v">HTML · CSS · basic React · Firebase · Knak</span>
+    </div>
+    <div class="skill-row">
+      <span class="k">AI workflow</span>
+      <span class="v">Adobe Firefly · Claude · Figma AI · Synthesia · Lovable · Stitch</span>
+    </div>
+    <div class="skill-row">
+      <span class="k">Collaboration</span>
+      <span class="v">Jira · Miro · Slack · Microsoft Teams · Agile workflows</span>
+    </div>
+    <div class="skill-row">
+      <span class="k">Education</span>
+      <span class="v">B.A. New Media Arts · PJAIT Warsaw · 2022 — 2025 · GPA 4.6 / 5.0</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ────────────────────────────────────── -->
+<section class="wrap section" id="contact" data-screen-label="Contact">
+  <div class="frame contact-frame">
+    <span class="cd-eyebrow">+ Contact · 2026</span>
+    <h2 class="contact-h">Let's <em>make</em> something.</h2>
+
+    <div class="contact-row">
+      <a class="contact-card" href="mailto:arizhuravskaya@gmail.com">
+        <span class="k">Email</span>
+        <span class="v">arizhuravskaya@gmail.com</span>
+      </a>
+      <a class="contact-card" href="tel:+48572120478">
+        <span class="k">Phone</span>
+        <span class="v">+48 572 120 478</span>
+      </a>
+      <a class="contact-card" href="#">
+        <span class="k">LinkedIn</span>
+        <span class="v">/in/arina-zhuravskaya</span>
+      </a>
+      <a class="contact-card" href="#">
+        <span class="k">Behance</span>
+        <span class="v">/arizhuravskaya</span>
+      </a>
+    </div>
+
+    <div class="foot">
+      <span>© 2026 Arina Zhuravskaya · Warsaw</span>
+      <span class="center">Last updated · May 2026</span>
+      <span class="right"><a href="#nav">↑ Back to top</a></span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SCRIPTS ────────────────────────────────────── -->
+<script src="image-slot.js"></script>
+
+<script>
+  // Nav border on scroll
+  const navEl = document.getElementById('nav');
+  const onScroll = () => navEl.classList.toggle('scrolled', window.scrollY > 8);
+  document.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Scroll-spy nav
+  (() => {
+    const navLinks = document.querySelectorAll('.nav .right a[href^="#"]');
+    const map = new Map();
+    navLinks.forEach(a => map.set(a.getAttribute('href').slice(1), a));
+    const workSection = document.getElementById('work');
+    const caseSections = Array.from(document.querySelectorAll('[id^="case-"]'));
+    const aboutSection = document.getElementById('about');
+    const contactSection = document.getElementById('contact');
+    const candidates = [workSection, ...caseSections, aboutSection, contactSection].filter(Boolean);
+
+    const onSpy = () => {
+      const y = window.scrollY + 120;
+      let activeId = null;
+      for (const s of candidates) {
+        if (s.offsetTop <= y) activeId = s.id;
+      }
+      navLinks.forEach(a => a.classList.remove('active'));
+      if (!activeId) return;
+      if (activeId === 'work' || activeId.startsWith('case-')) {
+        map.get('work')?.classList.add('active');
+      } else {
+        map.get(activeId)?.classList.add('active');
+      }
+    };
+    document.addEventListener('scroll', onSpy, { passive: true });
+    onSpy();
+  })();
+
+  // Cursor-following work-list preview
+  (() => {
+    const preview = document.getElementById('preview');
+    const items = document.querySelectorAll('.worklist a.item');
+    const frames = preview.querySelectorAll('.pframe');
+    if (matchMedia('(hover: none)').matches) return;
+
+    let raf = null, mx = 0, my = 0, curX = 0, curY = 0;
+    const tick = () => {
+      curX += (mx - curX) * 0.18;
+      curY += (my - curY) * 0.18;
+      preview.style.left = curX + 'px';
+      preview.style.top = curY + 'px';
+      raf = requestAnimationFrame(tick);
+    };
+
+    document.addEventListener('mousemove', (e) => {
+      mx = e.clientX + 60;
+      my = e.clientY;
+      if (!raf) raf = requestAnimationFrame(tick);
+    });
+
+    items.forEach((item) => {
+      item.addEventListener('mouseenter', () => {
+        const idx = item.dataset.preview;
+        frames.forEach(f => f.classList.toggle('active', f.dataset.frame === idx));
+        preview.classList.add('visible');
+      });
+      item.addEventListener('mouseleave', () => {
+        preview.classList.remove('visible');
+      });
+    });
+  })();
+</script>
+
+<!-- Tweaks (React) -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="tweaks.jsx"></script>
+
+<script>
+  // Auto-trigger print once fonts, images, and Babel scripts have settled.
+  (async () => {
+    try {
+      if (document.fonts && document.fonts.ready) {
+        await document.fonts.ready;
+      }
+      // Wait for any pending images to decode
+      const imgs = Array.from(document.images || []);
+      await Promise.all(imgs.map(img => {
+        if (img.complete) return Promise.resolve();
+        return new Promise(res => {
+          img.addEventListener('load', res, { once: true });
+          img.addEventListener('error', res, { once: true });
+        });
+      }));
+      // Babel parses inline JSX async; one rAF + a safety delay
+      await new Promise(r => requestAnimationFrame(r));
+      await new Promise(r => setTimeout(r, 600));
+      window.print();
+    } catch (e) {
+      // Fail open — still try to print
+      setTimeout(() => window.print(), 800);
+    }
+  })();
+</script>
+
+</body>
+</html>
